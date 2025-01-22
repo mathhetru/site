@@ -1,36 +1,37 @@
 const nodemailer = require('nodemailer');
-
+require('dotenv').config() ;
 import type { Handler } from '@netlify/functions';
+
+console.log(process)
 
 export const handler: Handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
-      body: JSON.stringify({ message: 'Method not allowed prout' }),
+      body: JSON.stringify({ message: 'Method not allowed !' }),
     };
   }
 
   if (!event.body) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ message: 'Bad Request: No body provided' }),
+      body: JSON.stringify({ message: 'Bad Request: No body provided !' }),
     };
   }
 	
   const { name, email, message } = JSON.parse(event.body);
 
-  // Configurez votre transporteur SMTP
   const transporter = nodemailer.createTransport({
-    service: 'gmail', // Exemple avec Gmail
+    service: process.env.MYSERVICE, 
     auth: {
-      user: 'your_email@gmail.com', // Remplacez par votre email
-      pass: 'your_email_password', // Remplacez par votre mot de passe
+      user: process.env.MYEMAIL, 
+      pass: process.env.MYPASSWORD, 
     },
   });
 
   const mailOptions = {
     from: email,
-    to: 'your_email@gmail.com', // Votre email pour recevoir les messages
+    to: process.env.MYEMAIL, 
     subject: `Nouveau message de ${name}`,
     text: message,
   };

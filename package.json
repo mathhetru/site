@@ -10,9 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "nodemailer": "^6.9.16",
     "nuxt": "^3.15.2",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vue-tsc": "^2.1.10"
   }
 }
