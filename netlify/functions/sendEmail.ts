@@ -6,7 +6,7 @@ export const handler: Handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
-      body: JSON.stringify({ message: 'Method not allowed' }),
+      body: JSON.stringify({ message: 'Method not allowed prout' }),
     };
   }
 
