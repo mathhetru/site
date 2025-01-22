@@ -1,10 +1,9 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config() ;
-import type { Handler } from '@netlify/functions';
 
-console.log(process)
+console.log("PROUT");
 
-export const handler: Handler = async (event) => {
+export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
