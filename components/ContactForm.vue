@@ -32,7 +32,6 @@ import { ref } from 'vue'
 const formName = ref('')
 const formEmail = ref('')
 const formMessage = ref('')
-
 const status = ref('')
 const isSuccess = ref(false)
 
@@ -52,8 +51,6 @@ const sendEmail = async () => {
         message: formMessage.value,
       }),
     })
-    console.log(formName.value, formEmail.value, formMessage.value);
-
 
     if (response.ok) {
       status.value = 'Votre message a été envoyé avec succès !'

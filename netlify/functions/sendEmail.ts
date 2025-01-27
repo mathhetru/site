@@ -1,9 +1,9 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config() ;
 
-console.log("PROUT");
+import type { Handler } from '@netlify/functions';
 
-export const handler = async (event) => {
+export const handler: Handler = async (event) => {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
@@ -21,16 +21,16 @@ export const handler = async (event) => {
   const { name, email, message } = JSON.parse(event.body);
 
   const transporter = nodemailer.createTransport({
-    service: process.env.MYSERVICE, 
+    service: process.env.ACCOUNT_SERVICE, 
     auth: {
-      user: process.env.MYEMAIL, 
-      pass: process.env.MYPASSWORD, 
+      user: process.env.ACCOUNT_EMAIL, 
+      pass: process.env.ACCOUNT_PASSWORD, 
     },
   });
 
   const mailOptions = {
     from: email,
-    to: process.env.MYEMAIL, 
+    to: process.env.ACCOUNT_EMAIL, 
     subject: `Nouveau message de ${name}`,
     text: message,
   };
