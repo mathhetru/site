@@ -53,7 +53,7 @@ const sendEmail = async () => {
     })
 
     if (response.ok) {
-      status.value = 'Votre message a été envoyé avec succès !'
+      status.value = 'Votre message a été envoyé avec succès!'
       isSuccess.value = true
       formName.value = ''
       formEmail.value = ''
