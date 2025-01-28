@@ -5,7 +5,7 @@
     <div v-if="status">Loading...</div>
     <form v-else>
       <div>
-        <label for="name">Nom :</label>
+        <label for="name">Nom et prénom :</label>
         <input type="text" id="name" v-model="formName" required />
       </div>
 
