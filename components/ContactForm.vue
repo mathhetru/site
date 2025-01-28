@@ -19,7 +19,7 @@
         <textarea id="message" v-model="formMessage" required></textarea>
       </div>
 
-      <button @click="sendEmail" type="button">Envoyer</button>
+      <button @click="sendEmail()" type="button">Envoyer</button>
     </form>
 
     <p v-if="sentence" :class="{ success: isSuccess, error: !isSuccess }">
