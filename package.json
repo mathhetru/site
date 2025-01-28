@@ -11,12 +11,13 @@
   },
   "dependencies": {
     "dotenv": "^16.4.7",
-    "nodemailer": "^6.9.16",
     "nuxt": "^3.15.2",
+    "nodemailer": "^6.10.0",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.17",
     "typescript": "^5.7.3",
     "vue-tsc": "^2.1.10"
   }
