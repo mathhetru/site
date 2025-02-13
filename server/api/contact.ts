@@ -8,15 +8,16 @@ type body = {
 
 export default defineEventHandler<{ body: body }>(async (event) => {
   const body = await readBody(event);
+  const config = useRuntimeConfig();
 
   const transporter = createTransport({
-    service: process.env.MAIL_SERVICE,
-    host: process.env.MAIL_HOST,
+    service: config.mailService,
+    host: config.mailHost,
     port: 465,
     secure: true, // SSL use
     auth: {
-      user: process.env.MAIL_USERNAME,
-      pass: process.env.MAIL_PASSWORD,
+      user: config.mailUsername,
+      pass: config.mailPassword,
     },
     tls: {
       rejectUnauthorized: false,
@@ -69,15 +70,15 @@ export default defineEventHandler<{ body: body }>(async (event) => {
     `;
 
   const contactMail = {
-    from: process.env.MAIL_USERNAME,
+    from: config.mailUsername,
     replyTo: `${body.name} <${body.email}>`,
-    to: process.env.MAIL_USERNAME,
+    to: config.mailUsername,
     subject: `Nouveau message de ${body.name}.`,
     html: HTMLBodyContact,
   };
 
   const confirmationMail = {
-    from: process.env.MAIL_USERNAME,
+    from: config.mailUsername,
     to: body.email,
     subject: "Confirmation de réception de votre message",
     html: HTMLBodyConfirmation,
