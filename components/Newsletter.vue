@@ -30,7 +30,6 @@
 
 <script setup="ts">
 import { ref } from "vue";
-import { postSubscriber } from "../utils/apiMailer.services";
 
 const firstName = ref("");
 const lastName = ref("");
@@ -48,19 +47,32 @@ const sendEmailForNewsletter = async () => {
     status.value = true;
     sentence.value = "";
 
-    const newsletterSubscribe = await postSubscriber({
-      firstName: firstName.value,
-      lastName: lastName.value,
-      email: email.value,
+    const newsletterSubscribe = await fetch("api/apiMailer", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstName: firstName.value,
+        lastName: lastName.value,
+        email: email.value,
+      }),
     });
+    console.log(newsletterSubscribe);
 
-    if (newsletterSubscribe.ok) {
+    if (newsletterSubscribe.status === 201) {
       sentence.value = "Vous êtes bien inscrit à la newsletter, merciiii ! ";
       isSuccess.value = true;
       status.value = false;
       firstName.value = "";
       lastName.value = "";
       email.value = "";
+    }
+
+    if (newsletterSubscribe.status === 200) {
+      sentence.value = "Vous êtes déjà inscrit à la newsletter.";
+      isSuccess.value = false;
+      status.value = false;
     }
 
     if (!newsletterSubscribe.ok) {

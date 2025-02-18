@@ -7,10 +7,8 @@ export default defineNuxtConfig({
     mailHost: process.env.NUXT_MAIL_HOST,
     mailUsername: process.env.NUXT_MAIL_USERNAME,
     mailPassword: process.env.NUXT_MAIL_PASSWORD,
-    public: {
-      apiSecret: process.env.NUXT_MAIL_API_KEY,
-      apiBase: process.env.NUXT_MAIL_API,
-    },
+    apiSecret: process.env.NUXT_MAIL_API_KEY,
+    apiBase: process.env.NUXT_MAIL_API,
   },
   typescript: {
     typeCheck: true,
