@@ -58,7 +58,6 @@ const sendEmailForNewsletter = async () => {
         email: email.value,
       }),
     });
-    console.log(newsletterSubscribe);
 
     if (newsletterSubscribe.status === 201) {
       sentence.value = "Vous êtes bien inscrit à la newsletter, merciiii ! ";
