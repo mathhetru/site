@@ -38,7 +38,7 @@ export default defineEventHandler<{ body: Subscriber }>(async (event) => {
     setResponseStatus(event, 500);
     throw createError({
       statusCode: 500,
-      statusMessage: `An error occurred while sending the email: ${error}`,
+      message: `An error occurred while sending the email`,
     });
   }
 });
