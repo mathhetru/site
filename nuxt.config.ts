@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  css: ["@/assets/styles/style.scss"],
   compatibilityDate: "2025-01-27",
   devtools: { enabled: true },
   runtimeConfig: {
@@ -14,7 +15,7 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: false,
   },
-  modules: ["@dargmuesli/nuxt-cookie-control"],
+  modules: ["@dargmuesli/nuxt-cookie-control", "@nuxtjs/tailwindcss"],
   cookieControl: {
     barPosition: "bottom-full",
     colors: {
