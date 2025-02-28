@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Header from "./components/Header.vue";
 import ContactForm from "./components/ContactForm.vue";
 import Newsletter from "./components/Newsletter.vue";
 import CookiesWindow from "./components/CookiesWindow.vue";
@@ -6,8 +7,9 @@ import CookiesWindow from "./components/CookiesWindow.vue";
 
 <template>
   <div>
+    <Header />
     <ContactForm />
-    <CookiesWindow />
+    <!-- <CookiesWindow /> -->
     <Newsletter />
   </div>
 </template>
