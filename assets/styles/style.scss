@@ -1,5 +1,5 @@
 @use "./utils/colors";
-// @use "./utils/fonts";
+@use "./utils/fonts";
 
 // MAIN ELEMENTS
 * {
@@ -8,9 +8,17 @@
 
 * a {
   text-decoration: none;
-  color: colors.$green;
+  font-family: fonts.$tilt;
+  text-transform: uppercase;
+  color: colors.$w-blue;
 }
 
 body {
-  background: colors.$grey;
+  background: colors.$bg-beige;
+  font-family: fonts.$roboto;
+  color: colors.$w-blue;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
