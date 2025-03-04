@@ -1,19 +1,20 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <header>
     <nav>
       <ul>
         <li>
-          <a class="bg-red-600" to="/">Accueil</a>
+          <NuxtLink to="/">Accueil</NuxtLink>
         </li>
         <li>
-          <router-link to="/about">À propos</router-link>
+          <NuxtLink to="/about">À propos</NuxtLink>
         </li>
         <li>
-          <router-link to="/contact">Contact</router-link>
+          <NuxtLink to="/contact">Contact</NuxtLink>
         </li>
       </ul>
     </nav>
   </header>
 </template>
-
-<script setup lang="ts"></script>
