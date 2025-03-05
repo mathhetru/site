@@ -12,11 +12,11 @@ export default defineNuxtConfig({
         { hid: 'description', name: 'description', content: 'Mathilde Hétru, développeuse web et mobile, graphiste et artiste illustratrice à Lille. Designs, illustrations et sites web personnalisés qui boostent votre image.' },
       ],
       link: [
-        { rel: 'icon', type: 'image/svg+xml', href: '/HRNet.svg' }
+        { rel: 'icon', type: 'image/png+xml', href: '/Mathilde-Hetru-Logo.png' }
       ]
     }
   },
-  css: ["@/assets/styles/style.scss"],
+  css: ["@/assets/styles/style.scss", '@fortawesome/fontawesome-svg-core/styles.css'],
   compatibilityDate: "2025-01-27",
   devtools: { enabled: true },
   runtimeConfig: {
@@ -31,5 +31,5 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: false,
   },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-security"],
 });

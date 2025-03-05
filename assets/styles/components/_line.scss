@@ -1,0 +1,29 @@
+@use "../utils/colors";
+
+.line {
+  display: block;
+  cursor: pointer;
+  background: colors.$bg-beige;
+  position: relative;
+  overflow: hidden;
+  margin: 0 30px;
+  &__text {
+    margin: 25px 0;
+    font-size: 1rem;
+  }
+}
+
+.line__change {
+  position: absolute;
+  background-color: colors.$bg-blue;
+  height: 4px;
+  bottom: 0;
+  width: 100%;
+  transform: scaleX(0);
+  transition-duration: 0.3s;
+}
+
+.line:hover .line__change {
+  transform: scaleX(1);
+  transition: 0.3s ease-in-out;
+}

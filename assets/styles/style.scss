@@ -1,12 +1,17 @@
 @use "./utils/colors";
 @use "./utils/fonts";
+@use "./layout/header";
+@use "./components/buttons";
+@use "./components/line";
+@use "./components/collapsible";
 
 // MAIN ELEMENTS
 * {
   box-sizing: border-box;
 }
 
-* a {
+* a,
+* button {
   text-decoration: none;
   font-family: fonts.$tilt;
   text-transform: uppercase;
@@ -17,8 +22,11 @@ body {
   background: colors.$bg-beige;
   font-family: fonts.$roboto;
   color: colors.$w-blue;
-  align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
 }
+
+// margin: 50px auto;
+// padding: 0 50px;
+// width: 1240px;

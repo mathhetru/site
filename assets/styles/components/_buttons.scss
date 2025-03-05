@@ -1,0 +1,33 @@
+@use "../utils/colors";
+
+.button-blue {
+  display:block;
+  cursor: pointer;
+  background: colors.$bg-orange;
+  border-radius: 20px;
+  box-shadow: 2px 2px 7px colors.$grey;
+  position: relative;
+  overflow: hidden;
+  &__text {
+    position: relative;
+    z-index: 10;
+    margin: 10px 40px;
+    font-size: 1rem;
+  }
+}
+
+.button-blue__change {
+  position: absolute;
+  z-index: 5;
+  background-color: colors.$bg-blue;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition-duration: 0.3s;
+}
+
+.button-blue:hover .button-blue__change {
+  transform: translateX(0%);
+  transition: 0.4s ease-in-out;
+}
