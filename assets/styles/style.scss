@@ -10,7 +10,13 @@
   box-sizing: border-box;
 }
 
-* a,
+* a {
+  text-decoration: none;
+  font-family: fonts.$tilt;
+  text-transform: uppercase;
+  color: colors.$w-blue;
+}
+
 * button {
   text-decoration: none;
   font-family: fonts.$tilt;

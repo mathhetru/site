@@ -7,7 +7,7 @@
         alt="Logo Mathilde Hétru"
       />
     </NuxtLink>
-    <nav class="w-7/12 lg:flex hidden">
+    <nav class="w-7/12 lg:flex items-center justify-center hidden">
       <NuxtLink class="line" to="/portfolio">
         <p class="line__text">portfolio</p>
         <div class="line__change"></div>

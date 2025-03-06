@@ -1,4 +1,5 @@
 @use "../utils/colors";
+@use "../utils/fonts";
 
 .line {
   display: block;
@@ -9,7 +10,7 @@
   margin: 0 30px;
   &__text {
     margin: 25px 0;
-    font-size: 1rem;
+    font-size: fonts.$size-nav;
   }
 }
 
