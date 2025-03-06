@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between items-center my-10 mx-auto px-10 xl:w-11/12">
+  <header class="flex justify-between items-center my-10 mx-auto px-10 width">
     <NuxtLink to="/">
       <img
         class="header__img"
