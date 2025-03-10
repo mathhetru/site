@@ -3,20 +3,32 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: 'fr'
+        lang: "fr",
       },
-      title: 'Mathilde Hétru',
+      title: "Mathilde Hétru",
       meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Mathilde Hétru, développeuse web et mobile, graphiste et artiste illustratrice à Lille. Designs, illustrations et sites web personnalisés qui boostent votre image.' },
+        { charset: "utf-8" },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Mathilde Hétru, développeuse web et mobile, graphiste et artiste illustratrice à Lille. Designs, illustrations et sites web personnalisés qui boostent votre image.",
+        },
       ],
       link: [
-        { rel: 'icon', type: 'image/png+xml', href: '/Mathilde-Hetru-Logo.png' }
-      ]
-    }
+        {
+          rel: "icon",
+          type: "image/png+xml",
+          href: "/Mathilde-Hetru-Logo.png",
+        },
+      ],
+    },
   },
-  css: ["@/assets/styles/style.scss", '@fortawesome/fontawesome-svg-core/styles.css'],
+  css: [
+    "@/assets/styles/style.scss",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
   compatibilityDate: "2025-01-27",
   devtools: { enabled: true },
   runtimeConfig: {
@@ -31,5 +43,5 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: false,
   },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-security"],
+  modules: ["nuxt-security", "@nuxt/ui"],
 });

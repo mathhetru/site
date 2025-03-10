@@ -16,35 +16,53 @@
         <p class="line__text">compétences</p>
         <div class="line__change"></div>
       </NuxtLink> -->
-      <div @click="handleClickCollapsible" class="line">
+      <!-- <div @click="handleClickCollapsible" class="line">
         <p class="line__text">
           services
-          <font-awesome-icon
-            class="ml-2 relative"
-            :icon="arrowDirection()"
-          />
+          <font-awesome-icon class="ml-2 relative" :icon="arrowDirection()" />
         </p>
         <div class="line__change"></div>
-        <div v-show="openModalLinks">
-          <div class="nav-collapsible">
-            <NuxtLink class="nav-collapsible__link" to="/services-dev-web">
-              <p class="nav-collapsible__text">developpement web</p>
-              <div class="nav-collapsible__change"></div>
-            </NuxtLink>
-            <NuxtLink
-              class="nav-collapsible__link"
-              to="/services-graphic-design"
-            >
-              <p class="nav-collapsible__text">graphisme print</p>
-              <div class="nav-collapsible__change"></div>
-            </NuxtLink>
-            <NuxtLink class="nav-collapsible__link" to="/services-illustration">
-              <p class="nav-collapsible__text">illustration</p>
-              <div class="nav-collapsible__change"></div>
-            </NuxtLink>
-          </div>
-        </div>
       </div>
+      <div v-if="openModalLinks">
+        <div class="nav-collapsible">
+          <NuxtLink class="nav-collapsible__link" to="/services-dev-web">
+            <p class="nav-collapsible__text">developpement web</p>
+            <div class="nav-collapsible__change"></div>
+          </NuxtLink>
+          <NuxtLink class="nav-collapsible__link" to="/services-graphic-design">
+            <p class="nav-collapsible__text">graphisme print</p>
+            <div class="nav-collapsible__change"></div>
+          </NuxtLink>
+          <NuxtLink class="nav-collapsible__link" to="/services-illustration">
+            <p class="nav-collapsible__text">illustration</p>
+            <div class="nav-collapsible__change"></div>
+          </NuxtLink>
+        </div>
+      </div> -->
+      <UDropdown
+        :items="items"
+        :popper="{ placement: 'bottom-start' }"
+        :ui="{
+          strategy: 'override',
+          color: {
+            white: {
+              solid: 'bg-white dark:bg-gray-900',
+            },
+          },
+        }"
+      >
+        <div @click="handleClickCollapsible" class="line">
+          <p class="line__text">
+            services
+            <font-awesome-icon class="ml-2 relative" :icon="arrowDirection()" />
+          </p>
+          <div class="line__change"></div>
+        </div>
+        <template #item="{ item }">
+          <p class="nav-collapsible__text">{{ item.label }}</p>
+          <div class="nav-collapsible__change"></div>
+        </template>
+      </UDropdown>
       <NuxtLink class="line" to="/about">
         <p class="line__text">qui suis-je ?</p>
         <div class="line__change"></div>
@@ -70,9 +88,36 @@ import { ref } from "vue";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
 const openModalLinks = ref(false);
+const items = [
+  [
+    {
+      label: "developpement web",
+      to: "/services-dev-web",
+      class: "nav-collapsible__link",
+      ui: {
+        strategy: "override",
+        color: {
+          white: {
+            solid: "bg-white dark:bg-gray-900",
+          },
+        },
+      },
+    },
+    {
+      label: "graphisme print",
+      to: "/services-graphic-design",
+      class: "nav-collapsible__link",
+    },
+    {
+      label: "illustration",
+      to: "/services-illustration",
+      class: "nav-collapsible__link",
+    },
+  ],
+];
 
 const arrowDirection = () => {
-  return openModalLinks.value ? fas.faAngleUp : fas.faAngleDown
+  return openModalLinks.value ? fas.faAngleUp : fas.faAngleDown;
 };
 
 const handleClickCollapsible = () => {
