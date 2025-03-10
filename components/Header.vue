@@ -21,26 +21,28 @@
           services
           <font-awesome-icon
             class="ml-2 relative"
-            :icon="['fas', arrowDirection()]"
+            :icon="arrowDirection()"
           />
         </p>
         <div class="line__change"></div>
-        <div v-if="open" class="nav__collapsible">
-          <NuxtLink class="nav__collapsible__link" to="/services-dev-web">
-            <p class="nav__collapsible__text">developpement web</p>
-            <div class="nav__collapsible__change"></div>
-          </NuxtLink>
-          <NuxtLink
-            class="nav__collapsible__link"
-            to="/services-graphic-design"
-          >
-            <p class="nav__collapsible__text">graphisme print</p>
-            <div class="nav__collapsible__change"></div>
-          </NuxtLink>
-          <NuxtLink class="nav__collapsible__link" to="/services-illustration">
-            <p class="nav__collapsible__text">illustration</p>
-            <div class="nav__collapsible__change"></div>
-          </NuxtLink>
+        <div v-show="openModalLinks">
+          <div class="nav-collapsible">
+            <NuxtLink class="nav-collapsible__link" to="/services-dev-web">
+              <p class="nav-collapsible__text">developpement web</p>
+              <div class="nav-collapsible__change"></div>
+            </NuxtLink>
+            <NuxtLink
+              class="nav-collapsible__link"
+              to="/services-graphic-design"
+            >
+              <p class="nav-collapsible__text">graphisme print</p>
+              <div class="nav-collapsible__change"></div>
+            </NuxtLink>
+            <NuxtLink class="nav-collapsible__link" to="/services-illustration">
+              <p class="nav-collapsible__text">illustration</p>
+              <div class="nav-collapsible__change"></div>
+            </NuxtLink>
+          </div>
         </div>
       </div>
       <NuxtLink class="line" to="/about">
@@ -65,14 +67,19 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 
-const open = ref(false);
+const openModalLinks = ref(false);
 
 const arrowDirection = () => {
-  return open.value ? "angle-up" : "angle-down";
+  return openModalLinks.value ? fas.faAngleUp : fas.faAngleDown
 };
 
 const handleClickCollapsible = () => {
-  open.value = !open.value;
+  openModalLinks.value = !openModalLinks.value;
+};
+
+const closeModalLinks = () => {
+  openModalLinks.value = false;
 };
 </script>

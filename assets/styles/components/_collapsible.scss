@@ -1,7 +1,18 @@
 @use "../utils/colors";
 @use "../utils/fonts";
 
-.nav__collapsible {
+.nav-collapsible__overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #000000da;
+}
+
+.nav-collapsible {
   z-index: 20;
   display: block;
   background-color: colors.$white;
@@ -25,7 +36,7 @@
   }
 }
 
-.nav__collapsible__change {
+.nav-collapsible__change {
   position: absolute;
   z-index: 5;
   background-color: colors.$bg-blue;
@@ -36,7 +47,7 @@
   transition-duration: 0.3s;
 }
 
-.nav__collapsible__link:hover .nav__collapsible__change {
+.nav-collapsible__link:hover .nav-collapsible__change {
   transform: translateX(0%);
   transition: 0.4s ease-in-out;
 }
