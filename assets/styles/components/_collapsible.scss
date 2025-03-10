@@ -1,12 +1,42 @@
+@use "../utils/colors";
+@use "../utils/fonts";
+
 .nav__collapsible {
-  // z-index: 20;
+  z-index: 20;
   display: block;
-  background-color: beige;
+  background-color: colors.$white;
   position: absolute;
-  // height: 100%;
-  // right: 0;
-  left: 50%;
-  transform: translateY(60%);
-  // transform: translateX(50%);
-  // transform: translateX(-50%);
+  transform: translateY(10px);
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 7px colors.$grey;
+  // margin: 5px;
+  overflow: hidden;
+  &__link {
+    position: relative;
+    display: block;
+  }
+  &__text {
+    position: relative;
+    color: colors.$w-blue;
+    font-size: fonts.$size-nav;
+    padding: 15px 20px;
+    z-index: 25;
+  }
+}
+
+.nav__collapsible__change {
+  position: absolute;
+  z-index: 5;
+  background-color: colors.$bg-blue;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateX(-100%);
+  transition-duration: 0.3s;
+}
+
+.nav__collapsible__link:hover .nav__collapsible__change {
+  transform: translateX(0%);
+  transition: 0.4s ease-in-out;
 }
