@@ -1,25 +1,14 @@
 @use "../utils/colors";
 @use "../utils/fonts";
 
-.nav-collapsible__overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  background-color: #000000da;
-}
-
 .nav-collapsible {
   z-index: 20;
   display: block;
-  background-color: colors.$white;
+  background-color: colors.$white !important;
   position: absolute;
   transform: translateY(10px);
   width: 200px;
-  border-radius: 20px;
+  border-radius: 20px !important;
   box-shadow: 2px 2px 7px colors.$grey;
   // margin: 5px;
   overflow: hidden;

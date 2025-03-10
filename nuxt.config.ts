@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -31,5 +32,12 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: false,
   },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-security"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-security", '@primevue/nuxt-module'],
+  primevue: {
+    options: {
+      theme: {
+        preset: 'none'
+      }
+    }
+  },
 });

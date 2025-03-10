@@ -14,15 +14,18 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@primeuix/themes": "^1.0.0",
     "dotenv": "^16.4.7",
     "nodemailer": "^6.10.0",
     "nuxt": "^3.15.2",
     "nuxt-security": "^2.2.0",
+    "primevue": "^4.3.1",
     "vue": "latest",
     "vue-router": "latest"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.13.1",
+    "@primevue/nuxt-module": "^4.3.1",
     "@types/nodemailer": "^6.4.17",
     "sass": "^1.85.1",
     "typescript": "^5.7.3",
