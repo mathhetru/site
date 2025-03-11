@@ -3,7 +3,7 @@
     <NuxtLink to="/">
       <img
         class="header__img"
-        src="~/assets/Mathilde-Hetru-Logo.png"
+        src="~/assets/Mathilde-Hetru-Logo.webp"
         alt="Logo Mathilde Hétru"
       />
     </NuxtLink>
@@ -82,7 +82,7 @@ const items = ref([
 ]);
 
 const arrowDirection = computed(() =>
-  isMenuOpen.value ? faAngleUp : faAngleDown,
+  isMenuOpen.value ? faAngleUp : faAngleDown
 );
 
 const toggleServices = (event: Event) => {
