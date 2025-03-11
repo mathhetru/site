@@ -3,13 +3,13 @@
 
 .line {
   text-decoration: none;
-  font-family: fonts.$tilt;
+  font-family: fonts.$tilt !important;
   text-transform: uppercase;
-  color: colors.$w-blue;
-  display: block;
-  cursor: pointer;
-  background: colors.$bg-beige;
-  position: relative;
+  color: colors.$w-blue !important;
+  display: block !important;
+  cursor: pointer !important;
+  background: colors.$bg-beige !important;
+  position: relative !important;
   // overflow: hidden;
   margin: 0 30px;
   &__text {
