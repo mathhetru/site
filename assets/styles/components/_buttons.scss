@@ -35,8 +35,8 @@
 }
 
 .button-drawer {
-  display: block !important;
-  cursor: pointer !important;
+  display: block;
+  cursor: pointer;
   background: colors.$bg-orange;
   border-radius: 20px;
   box-shadow: 2px 2px 7px colors.$grey;
@@ -45,7 +45,7 @@
   &__text {
     position: relative;
     z-index: 10;
-    margin: 10px 40px;
+    margin: 20px;
     font-size: fonts.$size-button;
   }
 }

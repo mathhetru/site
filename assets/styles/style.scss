@@ -33,8 +33,15 @@ body {
   width: 100%;
 }
 
+.hidden-on-large {
+  display: none;
+}
+
 @media screen and (max-width: 900px) {
-  .hidden {
+  .hidden-on-mobile {
     display: none;
+  }
+  .hidden-on-large {
+    display: block;
   }
 }

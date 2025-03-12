@@ -7,7 +7,7 @@
         alt="Logo Mathilde Hétru"
       />
     </NuxtLink>
-    <nav class="header-nav hidden">
+    <nav class="header-nav hidden-on-mobile ">
       <NuxtLink class="link-line" to="/portfolio">
         <p class="link-line__text">Portfolio</p>
         <div class="link-line__change"></div>
@@ -59,8 +59,8 @@
         <div class="link-line__change"></div>
       </NuxtLink>
     </nav>
-    <ButtonContact class="hidden" />
-    <button class="button-drawer" @click="drawerOpen()">
+    <ButtonContact class="hidden-on-mobile" />
+    <button class="button-drawer hidden-on-large" @click="drawerOpen()">
       <font-awesome-icon class="button-drawer__text" :icon="faArrowLeft" />
       <div class="button-drawer__change"></div>
     </button>
