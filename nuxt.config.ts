@@ -32,7 +32,7 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: false,
   },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-security", '@primevue/nuxt-module'],
+  modules: ["nuxt-security", '@primevue/nuxt-module', '@pinia/nuxt'],
   primevue: {
     options: {
       theme: {

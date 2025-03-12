@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between items-center my-10 mx-auto px-10 width">
+  <header id="header" class="header width">
     <NuxtLink to="/">
       <img
         class="header__img"
@@ -7,25 +7,25 @@
         alt="Logo Mathilde Hétru"
       />
     </NuxtLink>
-    <nav class="w-7/12 lg:flex items-center justify-center hidden">
-      <NuxtLink class="line" to="/portfolio">
-        <p class="line__text">portfolio</p>
-        <div class="line__change"></div>
+    <nav class="header-nav hidden">
+      <NuxtLink class="link-line" to="/portfolio">
+        <p class="link-line__text">Portfolio</p>
+        <div class="link-line__change"></div>
       </NuxtLink>
-      <Button
+      <button
         @click="toggleServices"
         aria-haspopup="true"
         aria-controls="overlay_menu"
         :aria-expanded="isMenuOpen"
-        class="line"
+        class="link-line"
         type="button"
       >
-        <p class="line__text">
-          services
-          <font-awesome-icon class="ml-2 relative" :icon="arrowDirection" />
+        <p class="link-line__text">
+          Services
+          <font-awesome-icon class="link-line__icon" :icon="arrowDirection" />
         </p>
-        <div class="line__change"></div>
-      </Button>
+        <div class="link-line__change"></div>
+      </button>
       <Menu
         ref="menuRef"
         id="overlay_menu"
@@ -46,34 +46,42 @@
           </NuxtLink>
         </template>
       </Menu>
-      <NuxtLink class="line" to="/about">
-        <p class="line__text">qui suis-je ?</p>
-        <div class="line__change"></div>
+      <NuxtLink class="link-line" to="/about">
+        <p class="link-line__text">Qui suis-je ?</p>
+        <div class="link-line__change"></div>
       </NuxtLink>
-      <a
-        class="line"
+      <NuxtLink
+        class="link-line"
         href="https://www.etsy.com/fr/shop/MathildeHetruArt"
         target="_blank"
       >
-        <p class="line__text">Boutique en ligne</p>
-        <div class="line__change"></div>
-      </a>
+        <p class="link-line__text">Boutique en ligne</p>
+        <div class="link-line__change"></div>
+      </NuxtLink>
     </nav>
-    <NuxtLink class="button-blue" to="/contact">
-      <p class="button-blue__text">Me contacter</p>
-      <div class="button-blue__change"></div>
-    </NuxtLink>
+    <ButtonContact class="hidden" />
+    <button class="button-drawer" @click="drawerOpen()">
+      <font-awesome-icon class="button-drawer__text" :icon="faArrowLeft" />
+      <div class="button-drawer__change"></div>
+    </button>
   </header>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import buttonContact from "./ButtonContact.vue";
+import { useSiteStore } from "../stores/site.store";
 import Menu from "primevue/menu";
-import Button from "primevue/button";
 
 const menuRef = ref();
 const isMenuOpen = ref(false);
+
+const store = useSiteStore();
+
+const drawerOpen = () => {
+  store.isOpenDrawer = !store.isOpenDrawer;
+};
 
 const items = ref([
   { label: "Développement web", route: "/services-dev-web" },

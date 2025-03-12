@@ -1,24 +1,26 @@
 @use "../utils/colors";
 @use "../utils/fonts";
 
-.line {
+.link-line {
   text-decoration: none;
   font-family: fonts.$tilt !important;
-  text-transform: uppercase;
   color: colors.$w-blue !important;
   display: block !important;
   cursor: pointer !important;
-  background: colors.$bg-beige !important;
+  background: none !important;
   position: relative !important;
-  // overflow: hidden;
   margin: 0 30px;
   &__text {
     margin: 25px 0;
     font-size: fonts.$size-nav;
   }
+  &__icon {
+    position: relative;
+    margin-left: 0.25rem;
+  }
 }
 
-.line__change {
+.link-line__change {
   position: absolute;
   background-color: colors.$bg-blue;
   height: 4px;
@@ -28,7 +30,7 @@
   transition-duration: 0.3s;
 }
 
-.line:hover .line__change {
+.link-line:hover .link-line__change {
   transform: scaleX(1);
   transition: 0.3s ease-in-out;
 }

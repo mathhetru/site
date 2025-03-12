@@ -2,6 +2,7 @@
 @use "./utils/fonts";
 @use "./layout/header";
 @use "./components/buttons";
+@use "./components/drawer";
 @use "./components/line";
 @use "./components/collapsible";
 
@@ -10,10 +11,11 @@
   box-sizing: border-box;
 }
 
-* a {
+* a,
+* button {
+  border: none;
   text-decoration: none;
   font-family: fonts.$tilt;
-  text-transform: uppercase;
   color: colors.$w-blue;
 }
 
@@ -27,5 +29,12 @@ body {
 }
 
 .width {
-  width: 1280px;
+  max-width: 80rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .hidden {
+    display: none;
+  }
 }
