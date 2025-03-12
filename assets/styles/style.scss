@@ -29,3 +29,8 @@ body {
 .width {
   width: 1280px;
 }
+
+button{
+  @apply button-blue;
+  @apply pointer;
+}
