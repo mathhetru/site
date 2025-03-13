@@ -61,11 +61,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { watch } from "vue";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import Drawer from "primevue/drawer";
 import { useSiteStore } from "../stores/site.store";
 import ButtonContact from "./ButtonContact.vue";
 
 const store = useSiteStore();
+
+const route = useRoute();
+
+watch(
+  () => route.path,
+  (newPath, oldPath) => {
+    store.isOpenDrawer = false;
+  },
+  { immediate: true },
+);
 </script>

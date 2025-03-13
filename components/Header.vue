@@ -7,7 +7,7 @@
         alt="Logo Mathilde Hétru"
       />
     </NuxtLink>
-    <nav class="header-nav hidden-on-mobile ">
+    <nav class="header-nav hidden-on-mobile">
       <NuxtLink class="link-line" to="/portfolio">
         <p class="link-line__text">Portfolio</p>
         <div class="link-line__change"></div>
@@ -69,8 +69,12 @@
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
-import { faArrowLeft, faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import buttonContact from "./ButtonContact.vue";
+import {
+  faArrowLeft,
+  faAngleUp,
+  faAngleDown,
+} from "@fortawesome/free-solid-svg-icons";
+import ButtonContact from "./ButtonContact.vue";
 import { useSiteStore } from "../stores/site.store";
 import Menu from "primevue/menu";
 
