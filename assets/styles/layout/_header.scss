@@ -1,9 +1,26 @@
 @use "../utils/colors";
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem auto;
+  padding: 0 2.5rem;
+
   &__img {
-    filter: drop-shadow(2px 2px 7px colors.$grey);
-    width: 70px;
-    height: 70px;
+    filter: drop-shadow(0.125rem 0.125rem 0.4375rem colors.$grey);
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 55%;
+  gap: 3.25rem;
+  &__link {
+    font-size: 1.125rem;
   }
 }

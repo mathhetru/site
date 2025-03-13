@@ -1,0 +1,40 @@
+@use "../utils/colors";
+@use "../utils/fonts";
+
+.drawer {
+  background: colors.$white !important;
+  padding: 2rem;
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 0;
+  }
+  &-nav__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  &-nav__text {
+    font-family: fonts.$tilt;
+    color: colors.$bg-blue !important;
+    font-size: 0.8rem;
+    // margin: 1rem 0;
+  }
+}
+
+.gray-line {
+  background-color: colors.$grey;
+  height: 1px;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.link-drawer-line {
+  margin: 0 !important;
+  &__text {
+    margin: 0.9375rem 0 !important;
+  }
+}
+

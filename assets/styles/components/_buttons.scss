@@ -13,6 +13,7 @@
     position: relative;
     z-index: 10;
     margin: 10px 40px;
+    text-align: center;
     font-size: fonts.$size-button;
   }
 }
@@ -31,4 +32,20 @@
 .button-blue:hover .button-blue__change {
   transform: translateX(0%);
   transition: 0.4s ease-in-out;
+}
+
+.button-drawer {
+  display: block;
+  cursor: pointer;
+  background: colors.$bg-orange;
+  border-radius: 20px;
+  box-shadow: 2px 2px 7px colors.$grey;
+  position: relative;
+  overflow: hidden;
+  &__text {
+    position: relative;
+    z-index: 10;
+    margin: 20px;
+    font-size: fonts.$size-button;
+  }
 }
