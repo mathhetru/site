@@ -1,7 +1,7 @@
 <template>
   <header id="header" class="header">
     <nav class="header__nav">
-      <NuxtLink to="/">
+      <NuxtLink class="header__link-home" to="/">
         <img
           class="header__img"
           src="~/assets/Mathilde-Hetru-Logo.webp"

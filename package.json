@@ -16,6 +16,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@pinia/nuxt": "^0.10.1",
     "@primeuix/themes": "^1.0.0",
+    "@primevue/forms": "^4.3.2",
     "dotenv": "^16.4.7",
     "nodemailer": "^6.10.0",
     "nuxt": "^3.15.2",

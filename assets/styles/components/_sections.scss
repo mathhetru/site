@@ -1,0 +1,39 @@
+@use "../utils/colors";
+@use "../utils/fonts";
+
+@mixin section($color: colors.$bg-beige) {
+  padding: 13rem 1rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color;
+
+  &__title {
+    margin: 1rem;
+    font-size: 3rem;
+    font-family: fonts.$patrick-hand;
+    color: colors.$w-blue;
+    font-weight: 400;
+  }
+
+  &__line {
+    background-color: colors.$w-blue;
+    height: 1px;
+    width: 20%;
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 0.9375rem;
+    color: colors.$w-blue;
+    line-height: 1.5rem;
+    text-align: center;
+    font-family: fonts.$roboto;
+    font-weight: 500;
+    margin: 1rem 0 0 0;
+  }
+}
+
+.section-contact {
+  @include section($color: colors.$bg-blue);
+}

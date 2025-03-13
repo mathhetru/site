@@ -1,12 +1,12 @@
 @use "./utils/colors";
 @use "./utils/fonts";
-@use "./utils/spacings";
 @use "./layout/header";
 @use "./components/buttons";
+@use "./components/sections";
 @use "./components/drawer";
 @use "./components/line";
 @use "./components/collapsible";
-@use "./components/_contact-form";
+@use "./components/contact-form";
 
 // MAIN ELEMENTS
 * {
@@ -33,11 +33,11 @@ body {
   padding: 0;
 }
 
-.width {
-  max-width: 80rem;
-  width: 100%;
-  margin: auto;
-}
+// .width {
+//   max-width: 80rem;
+//   width: 100vw;
+//   margin: auto;
+// }
 
 .hidden-on-large {
   display: none;
