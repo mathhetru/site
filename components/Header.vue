@@ -3,7 +3,7 @@
     <NuxtLink to="/">
       <img
         class="header__img"
-        src="~/assets/Mathilde-Hetru-Logo.png"
+        src="~/assets/Mathilde-Hetru-Logo.webp"
         alt="Logo Mathilde Hétru"
       />
     </NuxtLink>
@@ -80,13 +80,11 @@ import Menu from "primevue/menu";
 
 const menuRef = ref();
 const isMenuOpen = ref(false);
-
 const store = useSiteStore();
 
 const drawerOpen = () => {
   store.isOpenDrawer = !store.isOpenDrawer;
 };
-
 const items = ref([
   { label: "Développement web", route: "/services-dev-web" },
   { label: "Graphisme print et digital", route: "/services-graphic-design" },
