@@ -6,11 +6,11 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'fr'
       },
-      title: 'Mathilde Hétru',
+      title: 'Mathilde Hétru - Dev web, graphiste, illustratrice freelance',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Mathilde Hétru, développeuse web et mobile, graphiste et artiste illustratrice à Lille. Designs, illustrations et sites web personnalisés qui boostent votre image.' },
+        { hid: 'description', name: 'description', content: 'Mathilde Hétru, développeuse web et mobile, graphiste et artiste illustratrice freelance depuis 2015. Designs, illustrations et sites web personnalisés qui boostent votre image.' },
       ],
       link: [
         { rel: 'icon', type: 'image/png+xml', href: '/Mathilde-Hetru-Logo.png' }

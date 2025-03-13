@@ -1,31 +1,52 @@
 <template>
-  <div>
-    <h1>Contactez-nous</h1>
-
-    <div v-if="status">Loading...</div>
-    <form v-else>
-      <div>
-        <label for="name">Nom et prénom :</label>
-        <input type="text" id="name" v-model="formName" required />
+  <section class="baseline-contact spacing-header">
+    <h1 class="baseline-contact__title container-title">Contactez-nous</h1>
+  </section>
+  <section class="contact-form-container width">
+    <div class="contact-form-loader" v-if="status">Loading...</div>
+    <form class="contact-form" v-else>
+      <div class="contact-form__group">
+        <label class="contact-form__label" for="name">Nom et prénom :</label>
+        <input
+          class="contact-form__input"
+          type="text"
+          id="name"
+          v-model="formName"
+          required
+        />
       </div>
-
-      <div>
-        <label for="email">Email :</label>
-        <input type="email" id="email" v-model="formEmail" required />
+      <div class="contact-form__group">
+        <label class="contact-form__label" for="email">Email :</label>
+        <input
+          class="contact-form__input"
+          type="email"
+          id="email"
+          v-model="formEmail"
+          required
+        />
       </div>
-
-      <div>
-        <label for="message">Message :</label>
-        <textarea id="message" v-model="formMessage" required></textarea>
+      <div class="contact-form__group">
+        <label class="contact-form__label" for="message">Message :</label>
+        <textarea
+          class="contact-form__input"
+          id="message"
+          v-model="formMessage"
+          required
+        ></textarea>
       </div>
-
-      <button @click="sendEmail" type="button">Envoyer</button>
+      <button class="contact-form__button" @click="sendEmail" type="button">
+        Envoyer
+      </button>
     </form>
 
-    <p v-if="sentence" :class="{ success: isSuccess, error: !isSuccess }">
+    <p
+      v-if="sentence"
+      :class="{ success: isSuccess, error: !isSuccess }"
+      class="contact-form__button"
+    >
       {{ sentence }}
     </p>
-  </div>
+  </section>
 </template>
 
 <script setup="ts">
@@ -75,49 +96,3 @@ const sendEmail = async () => {
   }
 };
 </script>
-
-<style scoped>
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: auto;
-}
-
-label {
-  margin-top: 10px;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  margin-top: 15px;
-  padding: 10px 15px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-p.success {
-  margin-top: 15px;
-  color: green;
-}
-
-p.error {
-  margin-top: 15px;
-  color: red;
-}
-</style>

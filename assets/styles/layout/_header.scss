@@ -1,20 +1,26 @@
 @use "../utils/colors";
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2.5rem auto;
-  padding: 0 2.5rem;
-
+  padding: 2.5rem;
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+  background: colors.$bg-beige;
   &__img {
     filter: drop-shadow(0.125rem 0.125rem 0.4375rem colors.$grey);
     width: 4.375rem;
     height: 4.375rem;
   }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80rem;
+    margin: auto;
+  }
 }
 
-.header-nav {
+.header-container {
   display: flex;
   justify-content: center;
   align-items: center;

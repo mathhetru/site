@@ -1,10 +1,12 @@
 @use "./utils/colors";
 @use "./utils/fonts";
+@use "./utils/spacings";
 @use "./layout/header";
 @use "./components/buttons";
 @use "./components/drawer";
 @use "./components/line";
 @use "./components/collapsible";
+@use "./components/_contact-form";
 
 // MAIN ELEMENTS
 * {
@@ -26,11 +28,15 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 .width {
   max-width: 80rem;
   width: 100%;
+  margin: auto;
 }
 
 .hidden-on-large {

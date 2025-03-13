@@ -5,6 +5,15 @@
       position="right"
       class="drawer"
     >
+      <div class="drawer-header">
+        Mathilde Hétru<br />
+        Freelance depuis 2015<br />
+        <br />
+        // Developpeuse web<br />
+        // Graphiste print et digital<br />
+        // Illustratrice<br />
+      </div>
+      <div class="gray-line"></div>
       <nav class="drawer-nav">
         <NuxtLink class="link-line link-drawer-line" to="/portfolio">
           <p class="link-line__text link-drawer-line__text">portfolio</p>

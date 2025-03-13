@@ -1,0 +1,55 @@
+@use "../utils/colors";
+@use "../utils/fonts";
+
+.baseline-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: colors.$bg-blue;
+}
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: colors.$bg-beige;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+
+  &__label {
+    margin-top: 10px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  &__button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}
+
+p.success {
+  margin-top: 15px;
+  color: green;
+}
+
+p.error {
+  margin-top: 15px;
+  color: red;
+}

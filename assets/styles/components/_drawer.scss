@@ -4,11 +4,18 @@
 .drawer {
   background: colors.$white !important;
   padding: 2rem;
+  &-header {
+    font-family: fonts.$roboto;
+    color: colors.$w-blue;
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 2rem 0 1rem 0;
+  }
   &-nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 3rem 0;
+    padding: 0 0 3rem 0;
   }
   &-nav__container {
     display: flex;
@@ -37,4 +44,3 @@
     margin: 0.9375rem 0 !important;
   }
 }
-
