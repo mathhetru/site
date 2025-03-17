@@ -9,10 +9,8 @@
 }
 
 .contact-form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: colors.$bg-beige;
+  // display: flex;
+  padding: 2.5rem;
 }
 
 .contact-form {
@@ -20,27 +18,49 @@
   flex-direction: column;
   max-width: 37.5rem;
   margin: auto;
+  gap: 2rem;
 
   &__label {
-    margin-top: 10px;
+    display: block;
+    font-size: 0.9375rem;
+    font-family: fonts.$tilt;
+    margin-left: 0.9375rem;
+    margin-bottom: 0.625rem;
+    color: colors.$w-blue;
   }
 
   &__input {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
+    padding: 0.625rem 0.9375rem !important;
     border: 1px solid #ccc !important;
-    border-radius: 4px !important;
+    border-radius: 1.25rem !important;
+  }
+
+  &__input::placeholder,
+  &__textarea::placeholder {
+    color: colors.$grey !important;
+  }
+
+  &__textarea {
+    min-width: 100%;
+    padding: 0.625rem 0.9375rem !important;
+    border: 1px solid #ccc !important;
+    border-radius: 1.25rem !important;
+  }
+
+  &__message {
+    display: block;
+    font-size: 0.9375rem;
+    font-family: fonts.$tilt;
+    margin-left: 0.9375rem;
+    margin-top: 0.625rem;
+    color: red !important;
   }
 
   &__button {
-    margin-top: 15px;
-    padding: 10px 15px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
+    min-width: 12.5rem;
+    padding: 0;
+    align-self: center;
   }
 }
 

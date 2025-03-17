@@ -14,6 +14,7 @@
   />
   <section class="contact-form-container">
     <div class="contact-form-loader" v-if="status">Loading...</div>
+    <!-- ! //TODO : Travailler loading -->
     <Form
       v-slot="$form"
       :initialValues
@@ -21,8 +22,9 @@
       :validateOnValueUpdate="false"
       class="contact-form"
       @submit="submitForm"
-      v-else
+      v-if="!status"
     >
+      <!-- ! //TODO : prévoir select liste -->
       <div class="contact-form__group">
         <label class="contact-form__label" for="name">Nom et prénom :</label>
         <InputText
@@ -30,9 +32,11 @@
           name="name"
           class="contact-form__input"
           id="name"
+          placeholder="Marty McFly"
         />
         <Message
           v-if="$form.name?.invalid"
+          class="contact-form__message"
           severity="error"
           size="small"
           variant="simple"
@@ -42,13 +46,15 @@
       <div class="contact-form__group">
         <label class="contact-form__label" for="email">Email :</label>
         <InputText
-          type="text"
+          type="email"
           name="email"
           class="contact-form__input"
           id="email"
+          placeholder="marty.mcfly@hillvalley.com"
         />
         <Message
           v-if="$form.email?.invalid"
+          class="contact-form__message"
           severity="error"
           size="small"
           variant="simple"
@@ -59,21 +65,26 @@
         <label class="contact-form__label" for="message">Message :</label>
         <Textarea
           rows="5"
-          cols="30"
+          cols="20"
           type="text"
           name="message"
-          class="contact-form__input"
+          class="contact-form__textarea"
           id="message"
+          placeholder="Hello..."
         ></Textarea>
         <Message
           v-if="$form.message?.invalid"
+          class="contact-form__message"
           severity="error"
           size="small"
           variant="simple"
           >{{ $form.message.error.message }}</Message
         >
       </div>
-      <button class="contact-form__button" type="submit">Envoyer</button>
+      <button class="button-blue contact-form__button" type="submit">
+        <p class="button-blue__text">Envoyer</p>
+        <div class="button-blue__change"></div>
+      </button>
     </Form>
 
     <p
@@ -111,15 +122,15 @@ const resolver = ({ values }) => {
   const errors = {};
 
   if (!values.name) {
-    errors.name = [{ message: "Votre nom et prénom est requis" }];
+    errors.name = [{ message: "Votre nom et prénom est requis !" }];
   }
 
   if (!values.email) {
-    errors.email = [{ message: "Votre email est requis" }];
+    errors.email = [{ message: "Votre email est requis !" }];
   }
 
   if (!values.message) {
-    errors.message = [{ message: "Votre message est requis" }];
+    errors.message = [{ message: "Votre message est requis !" }];
   }
 
   return {
