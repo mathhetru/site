@@ -1,19 +1,18 @@
 <template>
-  <section class="section-contact">
-    <h1 class="section-contact__title">Contactez-moi</h1>
-    <div class="section-contact__line"></div>
-    <p class="section-contact__text">
-      Du crayon au code, je donne vie à vos projets. <br />
-      Un projet ? Une idée ? Ou juste un coucou.
-    </p>
-  </section>
-  <img
-    class="section-contact__wave"
-    src="~/assets/waves/wave-blue-down.svg"
-    alt="wave"
-  />
   <section class="contact-form-container">
-    <div class="contact-form-loader" v-if="status">Loading...</div>
+    <div v-if="status" class="loading-text">
+      <span class="letter">L</span>
+      <span class="letter">o</span>
+      <span class="letter">a</span>
+      <span class="letter">d</span>
+      <span class="letter">i</span>
+      <span class="letter">n</span>
+      <span class="letter">g</span>
+      <span class="letter">.</span>
+      <span class="letter">.</span>
+      <span class="letter">.</span>
+    </div>
+
     <!-- ! //TODO : Travailler loading -->
     <Form
       v-slot="$form"
@@ -24,6 +23,15 @@
       @submit="submitForm"
       v-if="!status"
     >
+      <p
+        v-if="sentence"
+        :class="{ success: isSuccess, error: !isSuccess }"
+        class="contact-form__sentence"
+      >
+        Votre message a été envoyé avec succès !
+        {{ sentence }}
+      </p>
+      
       <!-- ! //TODO : prévoir select liste -->
       <div class="contact-form__group">
         <label class="contact-form__label" for="name">Nom et prénom :</label>
@@ -86,14 +94,6 @@
         <div class="button-blue__change"></div>
       </button>
     </Form>
-
-    <p
-      v-if="sentence"
-      :class="{ success: isSuccess, error: !isSuccess }"
-      class="contact-form__button"
-    >
-      {{ sentence }}
-    </p>
   </section>
 </template>
 
@@ -101,7 +101,6 @@
 // import { useToast } from "primevue/usetoast";
 // import { Toast } from "primevue/toast";
 import { Form } from "@primevue/forms";
-import { yupResolver } from "@primevue/forms/resolvers/yup";
 import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
 import { ref } from "vue";

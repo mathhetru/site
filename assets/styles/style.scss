@@ -1,12 +1,13 @@
 @use "./utils/colors";
 @use "./utils/fonts";
+@use "./utils/sections";
 @use "./layout/header";
 @use "./components/buttons";
-@use "./components/sections";
 @use "./components/drawer";
 @use "./components/line";
 @use "./components/collapsible";
 @use "./components/contact-form";
+@use "./pages/contact";
 
 // MAIN ELEMENTS
 * {
@@ -31,13 +32,8 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
-
-// .width {
-//   max-width: 80rem;
-//   width: 100vw;
-//   margin: auto;
-// }
 
 .hidden-on-large {
   display: none;

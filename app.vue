@@ -3,7 +3,7 @@ import Header from "./components/Header.vue";
 import HeaderDrawer from "./components/HeaderDrawer.vue";
 import Footer from "./components/Footer.vue";
 
-// cookies gestion
+// TODO cookies gestion
 </script>
 
 <template>
