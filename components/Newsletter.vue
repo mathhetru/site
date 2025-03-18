@@ -1,15 +1,15 @@
 <template>
   <div v-if="status" class="loading-text">
-    <span class="letter">L</span>
-    <span class="letter">o</span>
-    <span class="letter">a</span>
-    <span class="letter">d</span>
-    <span class="letter">i</span>
-    <span class="letter">n</span>
-    <span class="letter">g</span>
-    <span class="letter">.</span>
-    <span class="letter">.</span>
-    <span class="letter">.</span>
+    <span class="newsletter-letter">L</span>
+    <span class="newsletter-letter">o</span>
+    <span class="newsletter-letter">a</span>
+    <span class="newsletter-letter">d</span>
+    <span class="newsletter-letter">i</span>
+    <span class="newsletter-letter">n</span>
+    <span class="newsletter-letter">g</span>
+    <span class="newsletter-letter">.</span>
+    <span class="newsletter-letter">.</span>
+    <span class="newsletter-letter">.</span>
   </div>
   <Form
     v-slot="$form"
@@ -21,7 +21,9 @@
     v-if="!status"
   >
     <div class="newsletter-form__group">
-      <label class="newsletter-form__label" for="name-for-newsletter">Prénom :</label>
+      <label class="newsletter-form__label" for="name-for-newsletter"
+        >Prénom :</label
+      >
       <InputText
         type="text"
         name="name-for-newsletter"
@@ -40,7 +42,9 @@
     </div>
 
     <div class="newsletter-form__group">
-      <label class="newsletter-form__label" for="email-for-newsletter">Email :</label>
+      <label class="newsletter-form__label" for="email-for-newsletter"
+        >Email :</label
+      >
       <InputText
         type="email"
         name="email-for-newsletter"

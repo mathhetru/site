@@ -23,8 +23,8 @@
       <div class="footer-legals">
         <p class="footer-legals__sentence">{{ date }} - Tous droits réservés</p>
         <div class="footer-legals__link">
-          <NuxtLink to="/mentions-legales"> mentions légales </NuxtLink>
-          <NuxtLink to="/CGV">CGV </NuxtLink>
+          <NuxtLink to="/mentions-legales">mentions légales</NuxtLink>
+          <NuxtLink to="/CGV">CGV</NuxtLink>
           <!-- //TODO faire page de confidentialité -->
           <!-- <NuxtLink to="/politiques-de-confidentialite">Politique de confidentialité
           </NuxtLink> -->
@@ -32,7 +32,8 @@
       </div>
       <p class="footer-sentence">
         Site web conçu sur-mesure, entièrement codé avec mes 10 doigts.<br />
-        Sous le capot : Nuxt.js, Node.js, Pinia, Netlify, PrimeVue. Et du jus de cervelle !<br />
+        Sous le capot : Nuxt.js, Node.js, Pinia, Netlify, PrimeVue. Et du jus de
+        cervelle !<br />
       </p>
     </div>
   </footer>
