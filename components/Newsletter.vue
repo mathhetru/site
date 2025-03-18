@@ -21,10 +21,10 @@
     v-if="!status"
   >
     <div class="newsletter-form__group">
-      <label class="newsletter-form__label" for="name">Prénom :</label>
+      <label class="newsletter-form__label" for="name-for-newsletter">Prénom :</label>
       <InputText
         type="text"
-        name="name"
+        name="name-for-newsletter"
         class="newsletter-form__input"
         id="name"
         placeholder="Marty McFly"
@@ -40,10 +40,10 @@
     </div>
 
     <div class="newsletter-form__group">
-      <label class="newsletter-form__label" for="email">Email :</label>
+      <label class="newsletter-form__label" for="email-for-newsletter">Email :</label>
       <InputText
         type="email"
-        name="email"
+        name="email-for-newsletter"
         class="newsletter-form__input"
         id="mail"
         placeholder="marty.mcfly@hillvalley.com"
