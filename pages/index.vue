@@ -1,9 +1,3 @@
-<script setup lang="ts">
-import Newsletter from "../components/Newsletter.vue";
-</script>
+<script setup lang="ts"></script>
 
-<template>
-  <div>
-    <Newsletter />
-  </div>
-</template>
+<template></template>

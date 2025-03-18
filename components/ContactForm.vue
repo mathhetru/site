@@ -13,7 +13,6 @@
       <span class="letter">.</span>
     </div>
 
-    <!-- ! //TODO : Travailler loading -->
     <Form
       v-slot="$form"
       :initialValues
@@ -105,6 +104,7 @@ import Textarea from "primevue/textarea";
 import { ref } from "vue";
 
 // const toast = useToast();
+// TODO : mettre en place toasts
 
 const initialValues = ref({
   name: "",

@@ -65,6 +65,7 @@
           <p class="link-line__text link-drawer-line__text">
             Boutique en ligne
           </p>
+          <!-- TODO ajouter fleche -->
           <div class="link-line__change"></div>
         </NuxtLink>
       </nav>

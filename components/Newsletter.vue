@@ -1,68 +1,154 @@
 <template>
-  <div v-if="status">Loading...</div>
-  <form v-else>
-    <div>
-      <label for="firstName">Prénom :</label>
-      <input type="text" id="firstName" v-model="firstName" required />
+  <div v-if="status" class="loading-text">
+    <span class="letter">L</span>
+    <span class="letter">o</span>
+    <span class="letter">a</span>
+    <span class="letter">d</span>
+    <span class="letter">i</span>
+    <span class="letter">n</span>
+    <span class="letter">g</span>
+    <span class="letter">.</span>
+    <span class="letter">.</span>
+    <span class="letter">.</span>
+  </div>
+  <Form
+    v-slot="$form"
+    :initialValues
+    :resolver
+    :validateOnValueUpdate="false"
+    class="newsletter-form"
+    @submit="submitForm"
+    v-if="!status"
+  >
+    <div class="newsletter-form__group">
+      <label class="newsletter-form__label" for="name">Prénom :</label>
+      <InputText
+        type="text"
+        name="name"
+        class="newsletter-form__input"
+        id="name"
+        placeholder="Marty McFly"
+      />
+      <Message
+        v-if="$form.message?.invalid"
+        class="newsletter-form__message"
+        severity="error"
+        size="small"
+        variant="simple"
+        >{{ $form.message.error.message }}</Message
+      >
     </div>
 
-    <div>
-      <label for="email">Email :</label>
-      <input type="email" id="email" v-model="email" required />
+    <div class="newsletter-form__group">
+      <label class="newsletter-form__label" for="email">Email :</label>
+      <InputText
+        type="email"
+        name="email"
+        class="newsletter-form__input"
+        id="mail"
+        placeholder="marty.mcfly@hillvalley.com"
+      />
+      <Message
+        v-if="$form.message?.invalid"
+        class="newsletter-form__message"
+        severity="error"
+        size="small"
+        variant="simple"
+        >{{ $form.message.error.message }}</Message
+      >
     </div>
+    <button class="button-blue newsletter-form__button" type="submit">
+      <p class="button-blue__text">S'inscrire !</p>
+      <div class="button-blue__change"></div>
+    </button>
+  </Form>
 
-    <button @click="sendEmailForNewsletter" type="button">Envoyer</button>
-  </form>
-
-  <p v-if="sentence" :class="{ success: isSuccess, error: !isSuccess }">
+  <p
+    v-if="sentence"
+    :class="{ success: isSuccess, error: !isSuccess }"
+    class="newsletter-form__sentence"
+  >
     {{ sentence }}
   </p>
 </template>
 
 <script setup="ts">
+// import { useToast } from "primevue/usetoast";
+// import { Toast } from "primevue/toast";
+import { Form } from "@primevue/forms";
+import InputText from "primevue/inputtext";
 import { ref } from "vue";
 
-const firstName = ref("");
-const email = ref("");
+// const toast = useToast();
+// TODO : mettre en place toasts
+
+const initialValues = ref({
+  name: "",
+  email: "",
+});
+
 const sentence = ref("");
 const isSuccess = ref(false);
 const status = ref(false);
 
-const sendEmailForNewsletter = async () => {
-  if (!firstName.value || !email.value) {
-    sentence.value = "Veuillez remplir tous les champs.";
+const resolver = ({ values }) => {
+  const errors = {};
+
+  if (!values.name) {
+    errors.name = [{ message: "Votre prénom est requis !" }];
   }
 
-  if (firstName.value && email.value) {
+  if (!values.email) {
+    errors.email = [{ message: "Votre email est requis !" }];
+  }
+
+  return {
+    values,
+    errors,
+  };
+};
+
+const submitForm = async ({ values, valid }) => {
+  if (valid) {
     status.value = true;
     sentence.value = "";
 
-    const newsletterSubscribe = await fetch("api/apiMailer", {
+    const sendEmailForSubscribeNewsletter = await fetch("api/apiMailer", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        firstName: firstName.value,
-        email: email.value,
+        firstName: values.name,
+        email: values.email,
       }),
     });
 
-    if (newsletterSubscribe.status === 201) {
+    if (sendEmailForSubscribeNewsletter.status === 201) {
       sentence.value = "Vous êtes bien inscrit à la newsletter, merciiii ! ";
       isSuccess.value = true;
       status.value = false;
-      firstName.value = "";
-      email.value = "";
+
+      initialValues.value = {
+        name: "",
+        email: "",
+        message: "",
+      };
     }
 
-    if (newsletterSubscribe.status === 200) {
+    if (sendEmailForSubscribeNewsletter.status === 200) {
       sentence.value = "Vous êtes déjà inscrit à la newsletter.";
       isSuccess.value = false;
       status.value = false;
+
+      initialValues.value = {
+        name: "",
+        email: "",
+        message: "",
+      };
     }
 
-    if (!newsletterSubscribe.ok) {
+    if (!sendEmailForSubscribeNewsletter.ok) {
       status.value = false;
       sentence.value =
         "Une erreur est survenue. Veuillez réessayer ou contacter l'administrateur.";
@@ -71,7 +157,7 @@ const sendEmailForNewsletter = async () => {
 };
 </script>
 
-<style scoped>
+<!-- <style scoped>
 form {
   display: flex;
   flex-direction: column;
@@ -115,4 +201,4 @@ p.error {
   margin-top: 15px;
   color: red;
 }
-</style>
+</style> -->
