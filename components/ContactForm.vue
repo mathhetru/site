@@ -28,10 +28,9 @@
         :class="{ success: isSuccess, error: !isSuccess }"
         class="contact-form__sentence"
       >
-        Votre message a été envoyé avec succès !
         {{ sentence }}
       </p>
-      
+
       <!-- ! //TODO : prévoir select liste -->
       <div class="contact-form__group">
         <label class="contact-form__label" for="name">Nom et prénom :</label>

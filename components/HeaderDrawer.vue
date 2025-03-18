@@ -6,12 +6,16 @@
       class="drawer"
     >
       <div class="drawer-header">
-        Mathilde Hétru<br />
-        Freelance depuis 2015<br />
+        <span class="drawer-header-prenom">Mathilde</span><br />
+        <span class="drawer-header-nom">Hétru</span><br />
         <br />
-        // Developpeuse web<br />
-        // Graphiste print et digital<br />
-        // Illustratrice<br />
+        <span class="drawer-header-baseline">
+        Developpeuse web<br />
+        Graphiste print et digital<br />
+        Illustratrice<br />
+        <br />
+        Freelance depuis 2015
+        </span>
       </div>
       <div class="gray-line"></div>
       <nav class="drawer-nav">

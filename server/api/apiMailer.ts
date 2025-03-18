@@ -1,7 +1,6 @@
 type Subscriber = {
   email: string;
   firstName: string;
-  lastName: string;
 };
 
 export default defineEventHandler<{ body: Subscriber }>(async (event) => {
@@ -21,7 +20,6 @@ export default defineEventHandler<{ body: Subscriber }>(async (event) => {
         email: subscriber.email,
         fields: {
           name: subscriber.firstName,
-          last_name: subscriber.lastName,
         },
       }),
     });

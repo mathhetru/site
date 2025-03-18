@@ -33,6 +33,25 @@
     font-size: 0.8rem;
     // margin: 1rem 0;
   }
+
+  &-header-prenom {
+    font-family: fonts.$patrick-hand;
+    font-size: 2rem;
+  }
+
+  &-header-nom {
+    text-transform: uppercase;
+    font-family: fonts.$tilt;
+    font-size: 2rem;
+    line-height: 1.5625rem;
+  }
+
+  &-header-baseline {
+    font-family: fonts.$patrick-hand;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+  }
+  
 }
 
 .link-drawer-line {

@@ -1,0 +1,43 @@
+@use "../utils/colors";
+@use "../utils/fonts";
+
+#footer {
+  background: colors.$w-blue;
+  width: 100vw;
+  padding: 2.5rem;
+  color: colors.$grey;
+}
+
+.footer {
+  &__wave {
+    margin-bottom: -0.3125rem;
+  }
+
+  &-container {
+    max-width: 80rem;
+    margin: auto;
+  }
+
+  &-title {
+    font-family: fonts.$patrick-hand;
+    font-size: fonts.$size-title;
+  }
+
+  &-RS-newsletter {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &-RS-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  &-RS__link {
+    color: colors.$grey;
+    font-size: 1.75rem;
+  }
+}

@@ -62,7 +62,7 @@
       </div>
       <ButtonContact class="hidden-on-mobile" />
       <button class="button-drawer hidden-on-large" @click="drawerOpen()">
-        <font-awesome-icon class="button-drawer__text" :icon="faArrowLeft" />
+        <font-awesome-icon class="button-drawer__text" :icon="faGripLines" />
         <div class="button-drawer__change"></div>
       </button>
     </nav>
@@ -72,7 +72,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import {
-  faArrowLeft,
+  faGripLines,
   faAngleUp,
   faAngleDown,
 } from "@fortawesome/free-solid-svg-icons";

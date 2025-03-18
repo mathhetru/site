@@ -1,12 +1,13 @@
 @use "./utils/colors";
 @use "./utils/fonts";
-@use "./utils/sections";
+@use "./layout/sections";
 @use "./layout/header";
+@use "./layout/footer";
+@use "./layout/contact-form";
 @use "./components/buttons";
 @use "./components/drawer";
 @use "./components/line";
 @use "./components/collapsible";
-@use "./components/contact-form";
 @use "./pages/contact";
 
 // MAIN ELEMENTS

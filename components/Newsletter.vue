@@ -1,49 +1,39 @@
 <template>
-  <div>
-    <h1>Inscris toi à la newsletter !</h1>
+  <div v-if="status">Loading...</div>
+  <form v-else>
+    <div>
+      <label for="firstName">Prénom :</label>
+      <input type="text" id="firstName" v-model="firstName" required />
+    </div>
 
-    <div v-if="status">Loading...</div>
-    <form v-else>
-      <div>
-        <label for="firstName">Prénom :</label>
-        <input type="text" id="firstName" v-model="firstName" required />
-      </div>
+    <div>
+      <label for="email">Email :</label>
+      <input type="email" id="email" v-model="email" required />
+    </div>
 
-      <div>
-        <label for="lastName">Nom :</label>
-        <input type="text" id="lastName" v-model="lastName" required />
-      </div>
+    <button @click="sendEmailForNewsletter" type="button">Envoyer</button>
+  </form>
 
-      <div>
-        <label for="email">Email :</label>
-        <input type="email" id="email" v-model="email" required />
-      </div>
-
-      <button @click="sendEmailForNewsletter" type="button">Envoyer</button>
-    </form>
-
-    <p v-if="sentence" :class="{ success: isSuccess, error: !isSuccess }">
-      {{ sentence }}
-    </p>
-  </div>
+  <p v-if="sentence" :class="{ success: isSuccess, error: !isSuccess }">
+    {{ sentence }}
+  </p>
 </template>
 
 <script setup="ts">
 import { ref } from "vue";
 
 const firstName = ref("");
-const lastName = ref("");
 const email = ref("");
 const sentence = ref("");
 const isSuccess = ref(false);
 const status = ref(false);
 
 const sendEmailForNewsletter = async () => {
-  if (!firstName.value || !lastName.value || !email.value) {
+  if (!firstName.value || !email.value) {
     sentence.value = "Veuillez remplir tous les champs.";
   }
 
-  if (firstName.value && lastName.value && email.value) {
+  if (firstName.value && email.value) {
     status.value = true;
     sentence.value = "";
 
@@ -54,7 +44,6 @@ const sendEmailForNewsletter = async () => {
       },
       body: JSON.stringify({
         firstName: firstName.value,
-        lastName: lastName.value,
         email: email.value,
       }),
     });
@@ -64,7 +53,6 @@ const sendEmailForNewsletter = async () => {
       isSuccess.value = true;
       status.value = false;
       firstName.value = "";
-      lastName.value = "";
       email.value = "";
     }
 
