@@ -53,3 +53,41 @@
     font-size: 1.75rem;
   }
 }
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+
+  &__group {
+    // display: flex;
+  }
+
+  &__label {
+    display: block;
+    font-size: 0.8rem;
+    font-family: fonts.$tilt;
+    margin-bottom: 0.8rem;
+    color: colors.$grey;
+  }
+
+  &__input {
+    width: 100%;
+    font-size: 0.8rem !important;
+    background: colors.$w-blue;
+    padding: 0.625rem 0.9375rem !important;
+    border: 1px solid #ccc !important;
+    border-radius: 1.25rem !important;
+  }
+
+  &__input::placeholder {
+    color: #cccccc79 !important;
+  }
+
+  &__button {
+    min-width: 12.5rem;
+    padding: 0;
+    margin-top: 0.5rem;
+    // align-self: center;
+  }
+}

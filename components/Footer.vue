@@ -8,14 +8,14 @@
     <div class="footer-container">
       <div class="footer-RS-newsletter">
         <div class="footer-RS">
-          <p class="footer-title">Retrouve mes réseaux</p>
+          <p class="footer-title">Suis-moi sur les réseaux</p>
           <SocialNetworks />
         </div>
         <div class="footer-newsletter">
           <p class="footer-title">Inscris-toi à la newsletter</p>
           <span class="footer-newsletter__sentence"
             >Je t’envoie une anecdote illustrée par mois.<br />
-            Pas de spam, pas de blabla. Juste du smile par mail ! ✨
+            Pas de spam, juste du smile par mail ! ✨
           </span>
           <Newsletter />
         </div>

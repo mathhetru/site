@@ -30,6 +30,9 @@
 
   &__input {
     width: 100%;
+    background: colors.$bg-beige;
+    font-size: 0.8rem !important;
+
     padding: 0.625rem 0.9375rem !important;
     border: 1px solid #ccc !important;
     border-radius: 1.25rem !important;
@@ -42,6 +45,8 @@
 
   &__textarea {
     min-width: 100%;
+    background: colors.$bg-beige;
+    font-size: 0.8rem !important;
     padding: 0.625rem 0.9375rem !important;
     border: 1px solid #ccc !important;
     border-radius: 1.25rem !important;

@@ -1,15 +1,15 @@
 <template>
   <div v-if="status" class="loading-text">
-    <span class="newsletter-letter">L</span>
-    <span class="newsletter-letter">o</span>
-    <span class="newsletter-letter">a</span>
-    <span class="newsletter-letter">d</span>
-    <span class="newsletter-letter">i</span>
-    <span class="newsletter-letter">n</span>
-    <span class="newsletter-letter">g</span>
-    <span class="newsletter-letter">.</span>
-    <span class="newsletter-letter">.</span>
-    <span class="newsletter-letter">.</span>
+    <span class="letter newsletter-letter">L</span>
+    <span class="letter newsletter-letter">o</span>
+    <span class="letter newsletter-letter">a</span>
+    <span class="letter newsletter-letter">d</span>
+    <span class="letter newsletter-letter">i</span>
+    <span class="letter newsletter-letter">n</span>
+    <span class="letter newsletter-letter">g</span>
+    <span class="letter newsletter-letter">.</span>
+    <span class="letter newsletter-letter">.</span>
+    <span class="letter newsletter-letter">.</span>
   </div>
   <Form
     v-slot="$form"
@@ -26,20 +26,20 @@
       >
       <InputText
         type="text"
-        name="name-for-newsletter"
+        name="name"
         class="newsletter-form__input"
-        id="name"
+        id="name-for-newsletter"
         placeholder="Marty McFly"
       />
-      <Message
-        v-if="$form.name?.invalid"
-        class="newsletter-form__message"
-        severity="error"
-        size="small"
-        variant="simple"
-        >{{ $form.name.error.message }}</Message
-      >
     </div>
+    <Message
+      v-if="$form.name?.invalid"
+      class="newsletter-form__message"
+      severity="error"
+      size="small"
+      variant="simple"
+      >{{ $form.name.error.message }}</Message
+    >
 
     <div class="newsletter-form__group">
       <label class="newsletter-form__label" for="email-for-newsletter"
@@ -47,20 +47,21 @@
       >
       <InputText
         type="email"
-        name="email-for-newsletter"
+        name="email"
         class="newsletter-form__input"
-        id="mail"
+        id="mail-for-newsletter"
         placeholder="marty.mcfly@hillvalley.com"
       />
-      <Message
-        v-if="$form.email?.invalid"
-        class="newsletter-form__message"
-        severity="error"
-        size="small"
-        variant="simple"
-        >{{ $form.email.error.message }}</Message
-      >
     </div>
+    <Message
+      v-if="$form.email?.invalid"
+      class="newsletter-form__message"
+      severity="error"
+      size="small"
+      variant="simple"
+      >{{ $form.email.error.message }}</Message
+    >
+
     <button class="button-blue newsletter-form__button" type="submit">
       <p class="button-blue__text">S'inscrire !</p>
       <div class="button-blue__change"></div>

@@ -12,13 +12,7 @@
 }
 
 .newsletter-letter {
-  display: inline-block;
-  font-size: 1rem;
   color: colors.$grey;
-  animation: bounce 1s ease-in-out infinite;
-  font-family: fonts.$tilt;
-  letter-spacing: 0.1875rem;
-  text-align: center;
 }
 
 .loading-text {
