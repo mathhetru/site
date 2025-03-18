@@ -32,12 +32,12 @@
         placeholder="Marty McFly"
       />
       <Message
-        v-if="$form.message?.invalid"
+        v-if="$form.name?.invalid"
         class="newsletter-form__message"
         severity="error"
         size="small"
         variant="simple"
-        >{{ $form.message.error.message }}</Message
+        >{{ $form.name.error.message }}</Message
       >
     </div>
 
@@ -53,12 +53,12 @@
         placeholder="marty.mcfly@hillvalley.com"
       />
       <Message
-        v-if="$form.message?.invalid"
+        v-if="$form.email?.invalid"
         class="newsletter-form__message"
         severity="error"
         size="small"
         variant="simple"
-        >{{ $form.message.error.message }}</Message
+        >{{ $form.email.error.message }}</Message
       >
     </div>
     <button class="button-blue newsletter-form__button" type="submit">
