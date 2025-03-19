@@ -1,5 +1,5 @@
 <template>
-  <div v-if="status" class="loading-text">
+  <div v-if="status" class="loading-text newsletter-loader">
     <span class="letter newsletter-letter">L</span>
     <span class="letter newsletter-letter">o</span>
     <span class="letter newsletter-letter">a</span>

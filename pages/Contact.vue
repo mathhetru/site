@@ -10,17 +10,16 @@
       </p>
     </section>
     <NuxtImg
-      class="section-contact__wave"
-      src="~/assets/waves/wave-blue-down.svg"
-      alt="wave"
+      src="images/waves/wave-blue-down.svg"
+      width="100%"
+      height="100%"
+      alt="wave blue"
       preload
     />
-
     <ContactForm />
   </div>
 </template>
 
 <script setup lang="ts">
 import ContactForm from "./../components/ContactForm.vue";
-import { NuxtImg } from "#components";
 </script>

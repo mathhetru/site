@@ -1,8 +1,10 @@
 <template>
   <NuxtImg
     class="footer__wave"
-    src="~/assets/waves/wave-darkblue-up.svg"
-    alt="wave"
+    src="/images/waves/wave-darkblue-up.svg"
+    alt="wave dark blue"
+    width="100%"
+    height="100%"
     preload
   />
   <footer id="footer">
@@ -27,16 +29,16 @@
           le contenu de ce site ne sont pas libres de droits.
         </p>
         <div class="footer-legals__link">
-          <NuxtLink class="footer-legals__link" to="/mentions-legales"
-            >mentions légales</NuxtLink
-          >
-          <NuxtLink class="footer-legals__link" to="/CGV">CGV</NuxtLink>
           <!-- //TODO faire page de confidentialité -->
           <NuxtLink
             class="footer-legals__link"
             to="/politiques-de-confidentialite"
             >Politique de confidentialité
           </NuxtLink>
+          <NuxtLink class="footer-legals__link" to="/CGV">CGV</NuxtLink>
+          <NuxtLink class="footer-legals__link" to="/mentions-legales"
+            >mentions légales</NuxtLink
+          >
         </div>
       </div>
       <p class="footer-sentence">

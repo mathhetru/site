@@ -2,11 +2,13 @@
   <header id="header" class="header">
     <nav class="header__nav">
       <NuxtLink class="header__link-home" to="/">
-        <NuxtImg 
+        <NuxtImg
           class="header__img"
-          src="~/assets/Mathilde-Hetru-Logo.webp"
+          src="/images/Mathilde-Hetru-Logo.webp"
           alt="Logo Mathilde Hétru"
-          preload 
+          width="100%"
+          height="100%"
+          preload
         />
       </NuxtLink>
       <div class="header-container hidden-on-mobile">
