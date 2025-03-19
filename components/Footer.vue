@@ -14,26 +14,34 @@
         <div class="footer-newsletter">
           <p class="footer-title">Inscris-toi à la newsletter</p>
           <span class="footer-newsletter__sentence"
-            >Je t’envoie une anecdote illustrée par mois.<br />
-            Pas de spam, juste du smile par mail ! ✨
+            >Je t’envoie une anecdote illustrée par mois. Pas de spam, juste du
+            smile par mail ! ✨
           </span>
           <Newsletter />
         </div>
       </div>
       <div class="footer-legals">
-        <p class="footer-legals__sentence">{{ date }} - Tous droits réservés</p>
+        <p class="footer-legals__sentence">
+          {{ date }} - Tous droits réservés - Les images, les illustrations et le contenu de ce
+          site ne sont pas libres de droits.
+        </p>
         <div class="footer-legals__link">
-          <NuxtLink to="/mentions-legales">mentions légales</NuxtLink>
-          <NuxtLink to="/CGV">CGV</NuxtLink>
+          <NuxtLink class="footer-legals__link" to="/mentions-legales"
+            >mentions légales</NuxtLink
+          >
+          <NuxtLink class="footer-legals__link" to="/CGV">CGV</NuxtLink>
           <!-- //TODO faire page de confidentialité -->
-          <!-- <NuxtLink to="/politiques-de-confidentialite">Politique de confidentialité
-          </NuxtLink> -->
+          <NuxtLink
+            class="footer-legals__link"
+            to="/politiques-de-confidentialite"
+            >Politique de confidentialité
+          </NuxtLink>
         </div>
       </div>
       <p class="footer-sentence">
         Site web conçu sur-mesure, entièrement codé avec mes 10 doigts.<br />
-        Sous le capot : Nuxt.js, Node.js, Pinia, Netlify, PrimeVue. Et du jus de
-        cervelle !<br />
+        Sous le capot : Nuxt.js, Node.js, Pinia, Netlify, PrimeVue... Et du jus de
+        cervelle !
       </p>
     </div>
   </footer>

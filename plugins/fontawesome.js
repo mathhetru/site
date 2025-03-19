@@ -5,7 +5,7 @@ import {
   faGripLines,
   fas,
 } from "@fortawesome/free-solid-svg-icons";
-import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { faAngleUp, faAngleDown, faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import {
   fab,
   faGithub,
@@ -25,6 +25,7 @@ library.add(
   faAngleDown,
   faArrowLeft,
   faGripLines,
+  faArrowUpRightFromSquare,
   faInstagram,
   faGithub,
   faLinkedin,

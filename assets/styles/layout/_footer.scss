@@ -52,6 +52,33 @@
     color: colors.$grey;
     font-size: 1.75rem;
   }
+
+  &-RS__link:hover {
+    color: colors.$bg-blue;
+  }
+
+  &-legals {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3.5rem;
+  }
+
+  &-legals__link {
+    margin-left: 0.9375rem;
+    color: colors.$grey;
+  }
+
+  &-legals__link:hover {
+    margin-left: 0.9375rem;
+    color: colors.$bg-blue;
+  }
+
+  &-sentence {
+    text-align: center;
+    margin-top: 3.125rem;
+    font-family: fonts.$tilt;
+  }
 }
 
 .newsletter-form {
@@ -60,15 +87,18 @@
   row-gap: 2rem;
 
   &__group {
-    // display: flex;
+    display: flex;
   }
 
   &__label {
+    width: 18%;
     display: block;
+    border-radius: 1.25rem 0 0 1.25rem;
     font-size: 0.8rem;
     font-family: fonts.$tilt;
-    margin-bottom: 0.8rem;
-    color: colors.$grey;
+    color: colors.$w-blue;
+    background: colors.$grey;
+    padding: 0.625rem 1.25rem;
   }
 
   &__input {
@@ -77,7 +107,7 @@
     background: colors.$w-blue;
     padding: 0.625rem 0.9375rem !important;
     border: 1px solid #ccc !important;
-    border-radius: 1.25rem !important;
+    border-radius: 0 1.25rem 1.25rem 0 !important;
   }
 
   &__input::placeholder {
@@ -88,6 +118,68 @@
     min-width: 12.5rem;
     padding: 0;
     margin-top: 0.5rem;
-    // align-self: center;
+    align-self: start;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .newsletter-form {
+    &__label {
+      width: 25%;
+    }
+  }
+
+  .footer {
+    &-legals {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .newsletter-form {
+    &__label {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footer {
+    &-RS-newsletter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3.125rem;
+    }
+
+    &-RS {
+      align-self: start;
+    }
+
+    &-newsletter {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.125rem;
+    }
+  }
+
+  .newsletter-form {
+    &__label {
+      width: 25%;
+    }
+
+    &__button {
+      align-self: center;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .newsletter-form {
+    &__label {
+      width: 40%;
+    }
   }
 }

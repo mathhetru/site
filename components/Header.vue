@@ -56,8 +56,13 @@
           href="https://www.etsy.com/fr/shop/MathildeHetruArt"
           target="_blank"
         >
-          <p class="link-line__text">Boutique en ligne</p>
-          <!-- TODO ajouter fleche -->
+          <p class="link-line__text">
+            Boutique en ligne
+            <font-awesome-icon
+              class="link-line__icon"
+              :icon="faArrowUpRightFromSquare"
+            />
+          </p>
           <div class="link-line__change"></div>
         </NuxtLink>
       </div>
@@ -76,6 +81,7 @@ import {
   faGripLines,
   faAngleUp,
   faAngleDown,
+  faArrowUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import ButtonContact from "./ButtonContact.vue";
 import { useSiteStore } from "../stores/site.store";

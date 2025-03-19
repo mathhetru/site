@@ -22,7 +22,7 @@
   >
     <div class="newsletter-form__group">
       <label class="newsletter-form__label" for="name-for-newsletter"
-        >Prénom :</label
+        >Prénom</label
       >
       <InputText
         type="text"
@@ -43,7 +43,7 @@
 
     <div class="newsletter-form__group">
       <label class="newsletter-form__label" for="email-for-newsletter"
-        >Email :</label
+        >Email</label
       >
       <InputText
         type="email"

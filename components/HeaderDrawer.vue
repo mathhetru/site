@@ -10,11 +10,11 @@
         <span class="drawer-header-nom">Hétru</span><br />
         <br />
         <span class="drawer-header-baseline">
-        Developpeuse web<br />
-        Graphiste print et digital<br />
-        Illustratrice<br />
-        <br />
-        Freelance depuis 2015
+          Developpeuse web<br />
+          Graphiste print et digital<br />
+          Illustratrice<br />
+          <br />
+          Freelance depuis 2015
         </span>
       </div>
       <div class="gray-line"></div>
@@ -64,6 +64,10 @@
         >
           <p class="link-line__text link-drawer-line__text">
             Boutique en ligne
+            <font-awesome-icon
+              class="link-line__icon"
+              :icon="faArrowUpRightFromSquare"
+            />
           </p>
           <!-- TODO ajouter fleche -->
           <div class="link-line__change"></div>
@@ -76,7 +80,10 @@
 
 <script setup lang="ts">
 import { watch } from "vue";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleDown,
+  faArrowUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
 import Drawer from "primevue/drawer";
 import { useSiteStore } from "../stores/site.store";
 import ButtonContact from "./ButtonContact.vue";

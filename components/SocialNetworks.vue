@@ -5,7 +5,11 @@
       target="_blank"
       class="footer-RS__link"
     >
-      <font-awesome-icon class="footer-RS__icon" :icon="faInstagram" />
+      <font-awesome-icon
+        alt="Lien vers compte instagram"
+        class="footer-RS__icon"
+        :icon="faInstagram"
+      />
       <!-- <span>mathilde.hetru</span> -->
     </NuxtLink>
 
@@ -14,7 +18,11 @@
       target="_blank"
       class="footer-RS__link"
     >
-      <font-awesome-icon class="footer-RS__icon" :icon="faGithub" />
+      <font-awesome-icon
+        alt="Lien vers compte github"
+        class="footer-RS__icon"
+        :icon="faGithub"
+      />
       <!-- <span>mathhetru</span> -->
     </NuxtLink>
 
@@ -23,7 +31,11 @@
       target="_blank"
       class="footer-RS__link"
     >
-      <font-awesome-icon class="footer-RS__icon" :icon="faLinkedin" />
+      <font-awesome-icon
+        alt="Lien vers compte linkedin"
+        class="footer-RS__icon"
+        :icon="faLinkedin"
+      />
       <!-- <span>Mathilde Hétru</span> -->
     </NuxtLink>
 
@@ -32,7 +44,11 @@
       target="_blank"
       class="footer-RS__link"
     >
-      <font-awesome-icon class="footer-RS__icon" :icon="faPinterest" />
+      <font-awesome-icon
+        alt="Lien vers compte pinterest"
+        class="footer-RS__icon"
+        :icon="faPinterest"
+      />
       <!-- <span>Mathilde Hétru</span> -->
     </NuxtLink>
   </div>
