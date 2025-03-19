@@ -32,7 +32,7 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: false,
   },
-  modules: ["nuxt-security", '@primevue/nuxt-module', '@pinia/nuxt'],
+  modules: ["nuxt-security", '@primevue/nuxt-module', '@pinia/nuxt', '@nuxt/image'],
   primevue: {
     options: {
       theme: {
