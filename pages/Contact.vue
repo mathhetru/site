@@ -11,8 +11,6 @@
     </section>
     <NuxtImg
       src="images/waves/wave-blue-down.svg"
-      width="100%"
-      height="100%"
       alt="wave blue"
       preload
     />

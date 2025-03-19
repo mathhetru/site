@@ -3,8 +3,6 @@
     class="footer__wave"
     src="/images/waves/wave-darkblue-up.svg"
     alt="wave dark blue"
-    width="100%"
-    height="100%"
     preload
   />
   <footer id="footer">

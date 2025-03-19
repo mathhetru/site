@@ -6,8 +6,6 @@
           class="header__img"
           src="/images/Mathilde-Hetru-Logo.webp"
           alt="Logo Mathilde Hétru"
-          width="100%"
-          height="100%"
           preload
         />
       </NuxtLink>

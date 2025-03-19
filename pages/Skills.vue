@@ -1,7 +1,7 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div>
-    <p>Compétences</p>
-  </div>
+  <Building />
 </template>
+
+<script lang="ts">
+import Building from "~/components/Building.vue";
+</script>
