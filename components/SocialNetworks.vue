@@ -4,12 +4,9 @@
       href="https://www.instagram.com/mathilde.hetru/"
       target="_blank"
       class="footer-RS__link"
+      aria-label="Lien vers compte instagram"
     >
-      <font-awesome-icon
-        alt="Lien vers compte instagram"
-        class="footer-RS__icon"
-        :icon="faInstagram"
-      />
+      <font-awesome-icon class="footer-RS__icon" :icon="faInstagram" />
       <!-- <span>mathilde.hetru</span> -->
     </NuxtLink>
 
@@ -17,12 +14,9 @@
       href="https://github.com/mathhetru"
       target="_blank"
       class="footer-RS__link"
+      aria-label="Lien vers compte github"
     >
-      <font-awesome-icon
-        alt="Lien vers compte github"
-        class="footer-RS__icon"
-        :icon="faGithub"
-      />
+      <font-awesome-icon class="footer-RS__icon" :icon="faGithub" />
       <!-- <span>mathhetru</span> -->
     </NuxtLink>
 
@@ -30,12 +24,9 @@
       href="https://www.linkedin.com/in/mathildehetru/"
       target="_blank"
       class="footer-RS__link"
+      aria-label="Lien vers compte linkedin"
     >
-      <font-awesome-icon
-        alt="Lien vers compte linkedin"
-        class="footer-RS__icon"
-        :icon="faLinkedin"
-      />
+      <font-awesome-icon class="footer-RS__icon" :icon="faLinkedin" />
       <!-- <span>Mathilde Hétru</span> -->
     </NuxtLink>
 
@@ -43,12 +34,9 @@
       href="https://www.pinterest.fr/mathildehetru"
       target="_blank"
       class="footer-RS__link"
+      aria-label="Lien vers compte pinterest"
     >
-      <font-awesome-icon
-        alt="Lien vers compte pinterest"
-        class="footer-RS__icon"
-        :icon="faPinterest"
-      />
+      <font-awesome-icon class="footer-RS__icon" :icon="faPinterest" />
       <!-- <span>Mathilde Hétru</span> -->
     </NuxtLink>
   </div>

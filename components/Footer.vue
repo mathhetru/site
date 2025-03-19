@@ -1,8 +1,9 @@
 <template>
-  <img
+  <NuxtImg
     class="footer__wave"
     src="~/assets/waves/wave-darkblue-up.svg"
     alt="wave"
+    preload
   />
   <footer id="footer">
     <div class="footer-container">
@@ -22,8 +23,8 @@
       </div>
       <div class="footer-legals">
         <p class="footer-legals__sentence">
-          {{ date }} - Tous droits réservés - Les images, les illustrations et le contenu de ce
-          site ne sont pas libres de droits.
+          {{ date }} - Tous droits réservés - Les images, les illustrations et
+          le contenu de ce site ne sont pas libres de droits.
         </p>
         <div class="footer-legals__link">
           <NuxtLink class="footer-legals__link" to="/mentions-legales"
@@ -40,8 +41,8 @@
       </div>
       <p class="footer-sentence">
         Site web conçu sur-mesure, entièrement codé avec mes 10 doigts.<br />
-        Sous le capot : Nuxt.js, Node.js, Pinia, Netlify, PrimeVue... Et du jus de
-        cervelle !
+        Sous le capot : Nuxt.js, Node.js, Pinia, Netlify, PrimeVue... Et du jus
+        de cervelle !
       </p>
     </div>
   </footer>

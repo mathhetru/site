@@ -9,10 +9,11 @@
         Laisse ton message ! J'y répondrai au plus vite.
       </p>
     </section>
-    <img
+    <NuxtImg
       class="section-contact__wave"
       src="~/assets/waves/wave-blue-down.svg"
       alt="wave"
+      preload
     />
 
     <ContactForm />
