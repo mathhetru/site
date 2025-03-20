@@ -7,7 +7,6 @@
       aria-label="Lien vers compte instagram"
     >
       <font-awesome-icon class="footer-RS__icon" :icon="faInstagram" />
-      <!-- <span>mathilde.hetru</span> -->
     </NuxtLink>
 
     <NuxtLink
@@ -17,7 +16,6 @@
       aria-label="Lien vers compte github"
     >
       <font-awesome-icon class="footer-RS__icon" :icon="faGithub" />
-      <!-- <span>mathhetru</span> -->
     </NuxtLink>
 
     <NuxtLink
@@ -27,7 +25,6 @@
       aria-label="Lien vers compte linkedin"
     >
       <font-awesome-icon class="footer-RS__icon" :icon="faLinkedin" />
-      <!-- <span>Mathilde Hétru</span> -->
     </NuxtLink>
 
     <NuxtLink
@@ -37,8 +34,9 @@
       aria-label="Lien vers compte pinterest"
     >
       <font-awesome-icon class="footer-RS__icon" :icon="faPinterest" />
-      <!-- <span>Mathilde Hétru</span> -->
     </NuxtLink>
+
+
   </div>
 </template>
 

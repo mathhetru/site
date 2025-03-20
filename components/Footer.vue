@@ -2,7 +2,7 @@
   <NuxtImg
     class="footer__wave"
     src="/images/waves/wave-darkblue-up.svg"
-    alt="wave dark blue"
+    alt="wave dark blue Mathilde Hétru"
     preload
   />
   <footer id="footer">
@@ -11,6 +11,13 @@
         <div class="footer-RS">
           <p class="footer-title">Suis-moi sur les réseaux</p>
           <SocialNetworks />
+          <NuxtLink
+            href="mailto:hello@mathildehetru.com"
+            class="footer__mail"
+            aria-label="Lien vers mail"
+          >
+            hello@mathildehetru.com
+          </NuxtLink>
         </div>
         <div class="footer-newsletter">
           <p class="footer-title">Inscris-toi à la newsletter</p>

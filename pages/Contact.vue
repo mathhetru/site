@@ -11,7 +11,7 @@
     </section>
     <NuxtImg
       src="images/waves/wave-blue-down.svg"
-      alt="wave blue"
+      alt="wave blue Mathilde Hétru"
       preload
     />
     <ContactForm />
@@ -20,4 +20,22 @@
 
 <script setup lang="ts">
 import ContactForm from "./../components/ContactForm.vue";
+
+useHead({
+  title: "Contacte-moi - Mathilde Hétru",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Contacte-moi pour tes projets en illustration, graphisme print et développement web. Échangeons sur tes besoins et trouvons ensemble la meilleure solution créative.",
+    },
+    { property: "og:url", content: "https://www.mathildehetru.com/contact" },
+    { property: "og:title", content: "Contacte-moi - Mathilde Hétru" },
+    {
+      property: "og:description",
+      content:
+        "Graphiste, illustratrice et développeuse front-end, je t'accompagne dans tes projets créatifs. Contacte-moi pour en parler !",
+    },
+  ],
+});
 </script>
