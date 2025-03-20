@@ -2,6 +2,6 @@
   <Building />
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import Building from "~/components/Building.vue";
 </script>
