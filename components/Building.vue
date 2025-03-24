@@ -15,6 +15,7 @@
   &__text {
     display: block;
     padding: 20rem 0;
+    margin: 0;
     text-align: center;
     font-family: fonts.$patrick-hand;
     font-size: 2rem;

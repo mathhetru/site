@@ -14,6 +14,7 @@ export default defineNuxtConfig({
         { name: 'author', content: 'Mathilde Hétru' },
         { name: 'keywords', content: 'illustratrice, graphiste, développeuse front-end, design, web, freelance, création visuelle, illustration, lille' },
         { name: 'robots', content: 'index, follow' },
+        // TODO changer images par page pour seo
         { property: 'og:image', content: '/images/Mathilde-Hetru-Logo.webp' },
 
       ],

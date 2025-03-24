@@ -1,0 +1,64 @@
+@use "../utils/colors";
+@use "../utils/fonts";
+
+.CGV {
+  &-container {
+    padding: 0 8rem;
+    font-family: fonts.$roboto;
+    line-height: 1.125rem;
+    color: colors.$w-blue;
+  }
+
+  &-title {
+    font-family: fonts.$tilt;
+    font-weight: 500;
+  }
+}
+
+.mentions-legales {
+  &-container {
+    padding: 0 8rem;
+    font-family: fonts.$roboto;
+    line-height: 1.125rem;
+    color: colors.$w-blue;
+  }
+
+  &-title {
+    font-family: fonts.$tilt;
+    font-weight: 500;
+  }
+
+  &__mail {
+    font-family: fonts.$roboto;
+    font-weight: 800;
+  }
+
+  &__mail:hover {
+    color: colors.$bg-blue;
+    transition: 0.1s ease-in-out;
+  }
+}
+
+.politiques-de-confidentialite {
+  &-container {
+    padding: 0 8rem;
+    font-family: fonts.$roboto;
+    line-height: 1.125rem;
+    color: colors.$w-blue;
+  }
+
+  &-title {
+    font-family: fonts.$tilt;
+    font-weight: 500;
+  }
+
+  &__mail {
+    font-family: fonts.$roboto;
+    font-weight: 800;
+  }
+
+  &__mail:hover {
+    color: colors.$bg-blue;
+    transition: 0.1s ease-in-out;
+  }
+}

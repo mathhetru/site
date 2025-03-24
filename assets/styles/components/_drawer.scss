@@ -4,6 +4,7 @@
 .drawer {
   background: colors.$white !important;
   padding: 2rem;
+  box-shadow: 0.125rem 0.125rem 0.4375rem colors.$black-opacity !important;
 
   &-header {
     font-family: fonts.$roboto;

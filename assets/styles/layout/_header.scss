@@ -6,13 +6,14 @@
   width: 100vw;
   z-index: 999;
   background: colors.$bg-beige;
+  box-shadow: 0.125rem 0.125rem 0.4375rem colors.$black-opacity;
 
   &__link-home {
     width: 9.875rem;
   }
 
   &__img {
-    filter: drop-shadow(0.125rem 0.125rem 0.4375rem colors.$grey);
+    filter: drop-shadow(0.125rem 0.125rem 0.4375rem colors.$black-opacity);
     width: 4.375rem;
     height: 4.375rem;
   }

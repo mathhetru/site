@@ -6,7 +6,7 @@
   cursor: pointer;
   background: colors.$bg-orange;
   border-radius: 1.25rem;
-  box-shadow: 0.125rem 0.125rem 0.4375rem colors.$grey;
+  box-shadow: 0.125rem 0.125rem 0.4375rem colors.$black-opacity;
   position: relative;
   overflow: hidden;
   &__text {
@@ -39,7 +39,7 @@
   cursor: pointer;
   background: colors.$bg-orange;
   border-radius: 1.25rem;
-  box-shadow: 0.125rem 0.125rem 0.4375rem colors.$grey;
+  box-shadow: 0.125rem 0.125rem 0.4375rem colors.$black-opacity;
   position: relative;
   overflow: hidden;
   &__text {

@@ -33,8 +33,7 @@
           {{ date }} - Tous droits réservés - Les images, les illustrations et
           le contenu de ce site ne sont pas libres de droits.
         </p>
-        <div class="footer-legals__link">
-          <!-- //TODO faire page de confidentialité -->
+        <div class="footer-legals-container">
           <NuxtLink
             class="footer-legals__link"
             to="/politiques-de-confidentialite"

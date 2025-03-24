@@ -54,6 +54,7 @@
 
   &-RS__link:hover {
     color: colors.$bg-blue;
+    transition: 0.1s ease-in-out;
   }
 
   &-legals {
@@ -63,15 +64,27 @@
     margin-top: 3.5rem;
   }
 
-  &-legals__link {
-    margin-left: 0.9375rem;
-    color: colors.$grey;
+  &-legals__sentence {
     text-align: center;
   }
 
+  &-legals-container {
+    text-align: center;
+  }
+
+  &-legals__link {
+    margin-left: 0.75rem;
+    color: colors.$grey;
+  }
+
+  &-legals__link:first-child {
+    margin-left: 0;
+  }
+
   &-legals__link:hover {
-    margin-left: 0.9375rem;
+    margin-left: 0.75rem;
     color: colors.$bg-blue;
+    transition: 0.1s ease-in-out;
   }
 
   &-sentence {
@@ -80,7 +93,7 @@
     font-family: fonts.$tilt;
   }
 
-  &__mail{
+  &__mail {
     color: colors.$grey;
     font-family: fonts.$tilt;
     font-size: 1rem;
@@ -88,8 +101,9 @@
     display: block;
   }
 
-  &__mail:hover{
+  &__mail:hover {
     color: colors.$bg-blue;
+    transition: 0.1s ease-in-out;
   }
 }
 
@@ -146,8 +160,6 @@
     text-align: center;
     margin-top: 1.25rem;
   }
-
-
 }
 
 @media screen and (max-width: 1024px) {
