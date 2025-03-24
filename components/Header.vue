@@ -48,7 +48,7 @@
             </NuxtLink>
           </template>
         </Menu>
-        <NuxtLink class="link-line" to="/about">
+        <NuxtLink class="link-line" to="/qui-suis-je">
           <p class="link-line__text">Qui suis-je ?</p>
           <div class="link-line__change"></div>
         </NuxtLink>
@@ -95,6 +95,7 @@ const store = useSiteStore();
 const drawerOpen = () => {
   store.isOpenDrawer = !store.isOpenDrawer;
 };
+
 const items = ref([
   { label: "Développement web", route: "/services-dev-web" },
   { label: "Graphisme print et digital", route: "/services-graphic-design" },

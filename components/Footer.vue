@@ -36,11 +36,14 @@
         <div class="footer-legals-container">
           <NuxtLink
             class="footer-legals__link"
-            to="/politiques-de-confidentialite"
+            to="/politique-confidentialite"
+            external
             >Politique de confidentialité
           </NuxtLink>
-          <NuxtLink class="footer-legals__link" to="/CGV">CGV</NuxtLink>
-          <NuxtLink class="footer-legals__link" to="/mentions-legales"
+          <NuxtLink class="footer-legals__link" to="/CGV" external
+            >CGV</NuxtLink
+          >
+          <NuxtLink class="footer-legals__link" to="/mentions-legales" external
             >Mentions légales</NuxtLink
           >
         </div>

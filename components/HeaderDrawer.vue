@@ -23,7 +23,7 @@
           <p class="link-line__text link-drawer-line__text">portfolio</p>
           <div class="link-line__change"></div>
         </NuxtLink>
-        <NuxtLink class="link-line link-drawer-line" to="/about">
+        <NuxtLink class="link-line link-drawer-line" to="/qui-suis-je">
           <p class="link-line__text link-drawer-line__text">qui suis-je ?</p>
           <div class="link-line__change"></div>
         </NuxtLink>
