@@ -41,7 +41,7 @@
           </NuxtLink>
           <NuxtLink class="footer-legals__link" to="/CGV">CGV</NuxtLink>
           <NuxtLink class="footer-legals__link" to="/mentions-legales"
-            >mentions légales</NuxtLink
+            >Mentions légales</NuxtLink
           >
         </div>
       </div>

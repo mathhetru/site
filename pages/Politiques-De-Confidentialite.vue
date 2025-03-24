@@ -7,6 +7,7 @@
     <NuxtImg
       src="images/waves/wave-blue-down.svg"
       alt="wave blue Mathilde Hétru"
+      class="section-blue__wave"2
       preload
     />
     <section class="politiques-de-confidentialite-container">

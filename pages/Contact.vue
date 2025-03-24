@@ -12,6 +12,7 @@
     <NuxtImg
       src="images/waves/wave-blue-down.svg"
       alt="wave blue Mathilde Hétru"
+      class="section-blue__wave"
       preload
     />
     <ContactForm />

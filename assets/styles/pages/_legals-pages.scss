@@ -3,10 +3,12 @@
 
 .CGV {
   &-container {
-    padding: 0 8rem;
+    padding-top: 2.5rem;
     font-family: fonts.$roboto;
     line-height: 1.125rem;
     color: colors.$w-blue;
+    margin: auto;
+    max-width: 80rem;
   }
 
   &-title {
@@ -17,10 +19,12 @@
 
 .mentions-legales {
   &-container {
-    padding: 0 8rem;
+    padding-top: 2.5rem;
     font-family: fonts.$roboto;
     line-height: 1.125rem;
     color: colors.$w-blue;
+    margin: auto;
+    max-width: 80rem;
   }
 
   &-title {
@@ -41,10 +45,12 @@
 
 .politiques-de-confidentialite {
   &-container {
-    padding: 0 8rem;
+    padding-top: 2.5rem;
     font-family: fonts.$roboto;
     line-height: 1.125rem;
     color: colors.$w-blue;
+    margin: auto;
+    max-width: 80rem;
   }
 
   &-title {
@@ -62,3 +68,24 @@
     transition: 0.1s ease-in-out;
   }
 }
+
+@media screen and (max-width: 1350px) {
+  .CGV {
+    &-container {
+      padding: 2.5rem 2.5rem 0 2.5rem;
+    }
+  }
+
+  .mentions-legales {
+    &-container {
+      padding: 2.5rem 2.5rem 0 2.5rem;
+    }
+  }
+
+  .politiques-de-confidentialite {
+    &-container {
+      padding: 2.5rem 2.5rem 0 2.5rem;
+    }
+  }
+}
+
