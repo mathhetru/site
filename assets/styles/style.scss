@@ -51,3 +51,25 @@ body {
     display: block;
   }
 }
+
+// --------------- SCROLLTOP
+
+.p-scrolltop {
+  background: colors.$bg-blue !important;
+  height: 3.125rem !important;
+  width: 3.125rem !important;
+  color: colors.$w-blue !important;
+  right: 1.875rem !important;
+  bottom: 1.875rem !important;
+  box-shadow: 0.125rem 0.125rem 0.4375rem colors.$black-opacity !important;
+
+  &-icon {
+    height: 1.125rem !important;
+  }
+}
+
+.p-scrolltop:hover {
+  background: colors.$w-blue !important;
+  color: colors.$bg-blue !important;
+  transition: 0.3s ease-in-out;
+}

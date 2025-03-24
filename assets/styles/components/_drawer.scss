@@ -1,5 +1,8 @@
 @use "../utils/colors";
 @use "../utils/fonts";
+.p-drawer-header {
+  margin-bottom: 1rem;
+}
 
 .drawer {
   background: colors.$white !important;
@@ -53,6 +56,9 @@
     line-height: 1.25rem;
   }
   
+  &-button {
+    margin-bottom: 2rem;
+  }
 }
 
 .link-drawer-line {

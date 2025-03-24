@@ -69,7 +69,6 @@
               :icon="faArrowUpRightFromSquare"
             />
           </p>
-          <!-- TODO ajouter fleche -->
           <div class="link-line__change"></div>
         </NuxtLink>
       </nav>
