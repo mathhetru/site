@@ -1,0 +1,23 @@
+[
+  {
+    "id": "dev01",
+    "title": "Booki",
+    "cover": "img/mathilde-hetru-booki-OC.jpg",
+    "pictures": ["img/mathilde-hetru-booki-OC.jpg"],
+    "description": "Le deuxième projet de la formation 'Développeur Web' d'OpenClassrooms, intitulé 'Transformez une maquette en site web avec HTML & CSS', consiste à intégrer une maquette de site de réservation de chambres d'hôtes en utilisant HTML5 et CSS3.\n\nL'objectif principal est de reproduire fidèlement le design fourni, en respectant les bonnes pratiques du développement web, notamment la structure sémantique du code, l'accessibilité et la compatibilité avec différents écrans (responsive design). Ce projet permet également de se familiariser avec la mise en page en CSS, en utilisant Flexbox et/ou CSS Grid, ainsi que la gestion des polices et des couleurs en accord avec la charte graphique fournie.",
+    "client": {
+      "name": "Booki pour OpenClassrooms",
+      "picture": "/images/projects/booki/mathilde-hetru-booki-OC.jpg"
+    },
+    "softwares": [
+      "Developpement web",
+      "HTML 5",
+      "CSS 3",
+      "GitHub",
+      "Visual Studio Code"
+    ],
+    "tags": ["Developpement web"],
+    "url": ["https://mathhetru.github.io/P2_Booki/"],
+    "date": "2022-03-25"
+  }
+]
