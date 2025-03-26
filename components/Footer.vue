@@ -19,7 +19,7 @@
             hello@mathildehetru.com
           </NuxtLink>
         </div>
-        <div class="footer-newsletter">
+        <div class="footer-newsletter" id="newsletter">
           <p class="footer-title">Inscris-toi à la newsletter</p>
           <span class="footer-newsletter__sentence"
             >Je t’envoie une anecdote illustrée par mois. Pas de spam, juste du
