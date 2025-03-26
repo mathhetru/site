@@ -44,3 +44,7 @@
 .section-blue {
   @include section($color: colors.$bg-blue);
 }
+
+.section-orange {
+  @include section($color: colors.$bg-orange);
+}

@@ -37,6 +37,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-size: fonts.$size;
+  scroll-behavior: smooth;
 }
 
 .hidden-on-large {
